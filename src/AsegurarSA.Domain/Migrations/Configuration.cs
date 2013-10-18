@@ -5,16 +5,16 @@ namespace AsegurarSA.Domain.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
     using AsegurarSA.Domain.Entities;
+    using AsegurarSA.Domain.Concrete;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<AsegurarSA.Domain.Concrete.EFDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<EFDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "AsegurarSA.Domain.Concrete.EFDbContext";
         }
 
-        protected override void Seed(AsegurarSA.Domain.Concrete.EFDbContext context)
+        protected override void Seed(EFDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 
