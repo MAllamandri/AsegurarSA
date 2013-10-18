@@ -29,10 +29,10 @@ namespace AsegurarSA.WebUI.Tests
             //Act
             var controller = new ClienteController(mock.Object);
 
-            var cliente = ((ViewResult)controller.List()).ViewData.Model as List<Cliente>;
+            var cliente = (IEnumerable<Cliente>)((ViewResult)controller.List()).Model;
 
             //Assert
-            Assert.Equals(cliente.Count, 5);
+            Assert.AreEqual(cliente.Count(), 5);
         }
     }
 }
