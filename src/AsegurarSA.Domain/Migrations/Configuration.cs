@@ -23,9 +23,11 @@ namespace AsegurarSA.Domain.Migrations
             //
             context.Empleados.AddOrUpdate(
               p => p.Nombre,
-                new Empleado { Nombre = "Andrew Peters" },
-                new Empleado { Nombre = "Andrew Peters" },
-                new Empleado { Nombre = "Andrew Peters" }
+                new Empleado { Nombre = "Pablo", Apellido = "Ibarra", FechaNacimiento = DateTime.Now,Telefono = "554564"},
+                new Empleado { Nombre = "Maximiliano", Apellido = "Allamandri", FechaNacimiento = DateTime.Now, Telefono = "554564" },
+                new Empleado { Nombre = "Marcos", Apellido = "Frund", FechaNacimiento = DateTime.Now, Telefono = "554564" },
+                new Empleado { Nombre = "Ezequiel", Apellido = "Kuschnir", FechaNacimiento = DateTime.Now, Telefono = "554564" },
+                new Empleado { Nombre = "Estefano", Apellido = "Veronesse", FechaNacimiento = DateTime.Now, Telefono = "554564" }
             );
             
         }
