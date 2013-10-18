@@ -1,0 +1,25 @@
+﻿@model IEnumerable<AsegurarSA.Domain.Entities.Empleado>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>Empleados</h2>
+
+ <table border="1" cellpadding="1" cellspacing="1">
+    <th>Nombre</th>
+    <th> Apellido</th>
+    <th> Telefono </th>
+    <th> Fecha Nacimiento</th>
+        @foreach (var e in Model)
+        {
+            <tr>
+                <td>@e.Nombre</td>
+                <td>@e.Apellido</td>
+                <td>@e.Telefono</td>
+                <td>@e.FechaNacimiento</td>
+                <td> <a href="/Empleados/Create/@e.EmpleadoId"> Modificar</a></td>     
+            </tr>
+        }
+ </table>
+

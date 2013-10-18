@@ -1,0 +1,45 @@
+﻿@model AsegurarSA.Domain.Entities.Empleado
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+@using (Html.BeginForm("Create", "Empleados", FormMethod.Post)) {
+        <fieldset>
+            <legend>Formulario de alta de empleados</legend>
+ 
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Nombre)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.Nombre)
+            </div>
+ 
+           <div class="editor-label">
+                @Html.LabelFor(model => model.Apellido)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.Apellido)
+            </div>
+ 
+           <div class="editor-label">
+                @Html.LabelFor(model => model.Telefono)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.Telefono)
+            </div>
+ 
+            <div class="editor-label">
+                @Html.LabelFor(model => model.FechaNacimiento)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.FechaNacimiento)
+            </div>
+
+            <p>
+                <input type="submit" value="Create" />
+            </p>
+        </fieldset>
+  } 
