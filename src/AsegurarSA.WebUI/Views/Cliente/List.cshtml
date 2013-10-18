@@ -1,0 +1,31 @@
+﻿@model IEnumerable<AsegurarSA.Domain.Entities.Cliente>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>Lista de clientes</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+        <th>Apellido</th>
+        <th>Nombre</th>
+        <th>Domicilio</th>
+        <th>Telefono principal</th>
+        <th>Telefono contacto</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var c in Model){
+        <tr>
+            <td>@c.Apellido</td>
+            <td>@c.Nombre</td>
+            <td>@c.Domicilio</td>
+            <td>@c.Telefono1</td>
+            <td>@c.Telefono2</td>
+            <td><a href="#"><i class="glyphicon glyphicon-edit"></i></a></td>
+        </tr>
+        }
+    </tbody>
+</table>

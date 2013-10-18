@@ -5,12 +5,18 @@
 }
 
 <h2>Empleados</h2>
-
- <table border="1" cellpadding="1" cellspacing="1">
-    <th>Nombre</th>
-    <th> Apellido</th>
-    <th> Telefono </th>
-    <th> Fecha Nacimiento</th>
+<div class="10">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Telefono</th>
+            <th>Fecha de nacimiento</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
         @foreach (var e in Model)
         {
             <tr>
@@ -18,8 +24,9 @@
                 <td>@e.Apellido</td>
                 <td>@e.Telefono</td>
                 <td>@e.FechaNacimiento</td>
-                <td> <a href="/Empleados/Create/@e.EmpleadoId"> Modificar</a></td>     
+                <td><a href="/Empleados/Create/@e.EmpleadoId"> <i class="glyphicon glyphicon-edit"/></a></td>    
             </tr>
         }
- </table>
-
+        </tbody>
+      </table>
+</div>

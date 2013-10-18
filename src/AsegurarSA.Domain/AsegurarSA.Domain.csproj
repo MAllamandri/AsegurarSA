@@ -47,9 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IClienteRepository.cs" />
     <Compile Include="Abstract\IEmpleadoRepository.cs" />
+    <Compile Include="Concrete\EFClienteRepository.cs" />
     <Compile Include="Concrete\EFDbContext.cs" />
     <Compile Include="Concrete\EFEmpleadoRepository.cs" />
+    <Compile Include="Entities\Cliente.cs" />
     <Compile Include="Entities\Empleado.cs" />
     <Compile Include="Migrations\201310181318216_InitialCreate.cs" />
     <Compile Include="Migrations\201310181318216_InitialCreate.Designer.cs">
@@ -66,6 +69,10 @@
     <Compile Include="Migrations\201310181419132_Required fields.cs" />
     <Compile Include="Migrations\201310181419132_Required fields.Designer.cs">
       <DependentUpon>201310181419132_Required fields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201310182053222_AgregarClientes.cs" />
+    <Compile Include="Migrations\201310182053222_AgregarClientes.Designer.cs">
+      <DependentUpon>201310182053222_AgregarClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201310181419132_Required fields.resx">
       <DependentUpon>201310181419132_Required fields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310182053222_AgregarClientes.resx">
+      <DependentUpon>201310182053222_AgregarClientes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

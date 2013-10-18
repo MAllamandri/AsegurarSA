@@ -10,5 +10,6 @@ namespace AsegurarSA.Domain.Concrete
     class EFDbContext: DbContext
     {
         public DbSet<Empleado> Empleados { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
     }
 }
