@@ -1,0 +1,67 @@
+﻿@{
+    Layout = null;
+    ViewBag.Title = "Login";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>AsegurarSA Admin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Styles.Render("~/Content/bootstrap/bootstrap.css")
+    <link rel="stylesheet" href="~/Content/themes/AsegurarSA/css/unicorn-login.css" />	
+</head>
+<body style="">
+    <div id="container">
+        <div id="logo">
+            <img src="./Unicorn Admin_files/logo.png" alt=""></div>
+        <div id="loginbox">
+            <form id="loginform" action="/Account/Login">
+                <p>Ingrese usuario y password para continuar.</p>
+                <div class="input-group input-sm">
+                    <span class="input-group-addon"> <i class="glyphicon glyphicon-user"></i>
+                    </span>
+                    <input class="form-control" type="text" id="UserName" placeholder="Usuario"></div>
+                <div class="input-group">
+                    <span class="input-group-addon"> <i class="glyphicon glyphicon-lock"></i>
+                    </span>
+                    <input class="form-control" type="password" id="Password" placeholder="Password"></div>
+                <div class="form-actions clearfix">
+                    <div class="pull-right">
+                        <a href="#" class="flip-link to-recover grey">Recuperar contraseña</a>
+                    </div>
+                    <input type="submit" class="btn btn-block btn-primary btn-default" value="Login"></div>
+            </form>
+
+            <form id="recoverform" action="#">
+                <p>
+                    Ingrese su e-mail y nosotros les enviaremos las instrucciones para recuperar su password.
+                </p>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="icon-envelope"></i>
+                    </span>
+                    <input class="form-control" type="text" placeholder="E-mail address"></div>
+                <div class="form-actions clearfix">
+                    <div class="pull-left">
+                        <a href="#" class="grey flip-link to-login">Click to login</a>
+                    </div>
+                    <input type="submit" class="btn btn-block btn-inverse" value="Recover"></div>
+            </form>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/jquery-ui.custom.min.js"></script>
+    <script src="~/Scripts/unicorn.login.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+

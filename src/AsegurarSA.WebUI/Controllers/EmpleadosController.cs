@@ -8,6 +8,7 @@ using AsegurarSA.Domain.Entities;
 
 namespace AsegurarSA.WebUI.Controllers
 {
+    [Authorize    ]
     public class EmpleadosController : Controller
     {
         // GET: /Empleados/

@@ -135,6 +135,12 @@
       <Private>True</Private>
       <HintPath>..\..\lib\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -143,12 +149,14 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\EmpleadosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infraestructura\NinjectControllerFactory.cs" />
+    <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -281,6 +289,7 @@
     <Content Include="Content\themes\AsegurarSA\css\jquery.gritter.css" />
     <Content Include="Content\themes\AsegurarSA\css\jquery.ui.ie.css" />
     <Content Include="Content\themes\AsegurarSA\css\select2.css" />
+    <Content Include="Content\themes\AsegurarSA\css\unicorn-login.css" />
     <Content Include="Content\themes\AsegurarSA\css\unicorn.blue.css" />
     <Content Include="Content\themes\AsegurarSA\css\unicorn.grey-old.css" />
     <Content Include="Content\themes\AsegurarSA\css\unicorn.grey.css" />
@@ -434,6 +443,7 @@
     <Content Include="Content\themes\AsegurarSA\fonts\glyphiconshalflings-regular.ttf" />
     <Content Include="Content\themes\AsegurarSA\fonts\glyphiconshalflings-regular.woff" />
     <Content Include="Content\themes\AsegurarSA\img\demo\Thumbs.db" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap-colorpicker.js" />
@@ -512,10 +522,11 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Views\Cliente\List.cshtml" />
+    <Content Include="Views\Shared\_SimpleLayout.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
