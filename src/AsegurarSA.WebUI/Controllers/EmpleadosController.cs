@@ -21,21 +21,35 @@ namespace AsegurarSA.WebUI.Controllers
         {
             return View(_repository.Empleados);
         }
-
-        public ActionResult Create()
+       
+        
+        public ActionResult Create(Empleado empleado=null)
         {
-            return View();
+            return View(empleado);
         }
 
         [HttpPost]
-        public ActionResult Create(Empleado empleado)
+        public ActionResult Editar(Empleado empleado)
         {
             if (ModelState.IsValid)
             {
                 _repository.SaveEmpleado(empleado);
                 return RedirectToAction("List");
             }
-            return View(empleado);
+            return RedirectToAction("Create", empleado);
+        }
+
+        public ActionResult Modificar(int EmpleadoId=0)
+        {
+            Empleado empleado = _repository.Empleados.Where(e => e.EmpleadoId == EmpleadoId).FirstOrDefault();
+            return RedirectToAction("Create",empleado);
+        }
+
+        public ActionResult Delete(int EmpleadoId = 0)
+        {
+            Empleado empleado = _repository.Empleados.Where(e => e.EmpleadoId == EmpleadoId).FirstOrDefault();
+            _repository.DeleteEmpleado(empleado);
+            return RedirectToAction("List");
         }
     }
 }

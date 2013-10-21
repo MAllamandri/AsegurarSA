@@ -6,10 +6,11 @@
 }
 
 <h2>Create</h2>
-@using (Html.BeginForm("Create", "Empleados", FormMethod.Post)) {
+@using (Html.BeginForm("Editar", "Empleados", FormMethod.Post)) {
         <fieldset>
             <legend>Formulario de alta de empleados</legend>
- 
+            @Html.HiddenFor(model => model.EmpleadoId);
+            @Html.HiddenFor(model => model.Eliminado);
             <div class="editor-label">
                 @Html.LabelFor(model => model.Nombre)
             </div>

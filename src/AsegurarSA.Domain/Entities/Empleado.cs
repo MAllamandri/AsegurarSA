@@ -17,6 +17,7 @@ namespace AsegurarSA.Domain.Entities
         [Required]
         public string Telefono { get; set; }
 
+        [DataType(DataType.Date)]
         [Required]
         [Display(Name="Fecha Nacimiento")]
         public DateTime FechaNacimiento { get; set; }
