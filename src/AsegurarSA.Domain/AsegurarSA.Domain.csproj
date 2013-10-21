@@ -39,12 +39,27 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\..\lib\Microsoft.AspNet.Providers.Core.1.0\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IClienteRepository.cs" />
@@ -74,6 +89,14 @@
     <Compile Include="Migrations\201310182053222_AgregarClientes.Designer.cs">
       <DependentUpon>201310182053222_AgregarClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201310200208007_Login.cs" />
+    <Compile Include="Migrations\201310200208007_Login.Designer.cs">
+      <DependentUpon>201310200208007_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201310200227576_Login1.cs" />
+    <Compile Include="Migrations\201310200227576_Login1.Designer.cs">
+      <DependentUpon>201310200227576_Login1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -97,6 +120,15 @@
     <EmbeddedResource Include="Migrations\201310182053222_AgregarClientes.resx">
       <DependentUpon>201310182053222_AgregarClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310200208007_Login.resx">
+      <DependentUpon>201310200208007_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310200227576_Login1.resx">
+      <DependentUpon>201310200227576_Login1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
