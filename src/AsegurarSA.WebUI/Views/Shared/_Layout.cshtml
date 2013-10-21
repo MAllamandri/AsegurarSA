@@ -23,8 +23,9 @@
 		<meta charset="UTF-8" />
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         @Styles.Render("~/Content/bootstrap/bootstrap.css")
-		<link rel="stylesheet" href="~/Content/themes/AsegurarSA/css/fullcalendar.css" />	
-		<link rel="stylesheet" href="~/Content/themes/AsegurarSA/css/unicorn.main.css" />
+        <link rel="stylesheet" href="~/Content/themes/AsegurarSA/css/font-awesome.css">
+	    <link rel="stylesheet" href="~/Content/themes/AsegurarSA/css/fullcalendar.css" />	
+        <link rel="stylesheet" href="~/Content/themes/AsegurarSA/css/unicorn.css" />
 	    <link rel="stylesheet" href="~/Content/themes/AsegurarSA/css/unicorn.grey.css" class="skin-color" />
         @Styles.Render("~/Content/themes/AsegurarSA/css/AsegurarSA.css")
         <script src="~/Scripts/jquery.min.js"></script>
@@ -53,9 +54,16 @@
             
 		<div id="sidebar">
 			<ul>
-				<li id="dashboard"class="active"><a href="index.html"><i class="glyphicon glyphicon-home"></i> <span>Dashboard</span></a></li>
-				<li id="empleado"><a href="buttons.html"><i class="glyphicon glyphicon-inbox"></i> <span>Empleados</span></a></li>
-				<li id="cliente"><a href="interface.html"><i class="glyphicon glyphicon-user"></i> <span>Clientes</span></a></li>
+			    <li id="dashboard"class="active"><a href="index.html"><i class="glyphicon glyphicon-home"></i> <span>Dashboard</span></a></li>
+                <li class="submenu" id="empleado">
+					<a href="/Empleados"><i class="glyphicon glyphicon-inbox"></i> <span>Empleados</span> <i class="arrow glyphicon glyphicon-chevron-right"></i></a>
+					<ul>
+					    <li id="list"><a href="/Empleados/">Lista de empleados</a></li>
+                        <li id="create"><a href="/Empleados/">Crear nuevo</a></li>
+					</ul>
+				</li>
+				@*<li id="empleado"><a href="buttons.html"><i class="glyphicon glyphicon-inbox"></i> <span>Empleados</span></a></li>*@
+				<li id="cliente"><a href="/Clientes"><i class="glyphicon glyphicon-user"></i> <span>Clientes</span></a></li>
 			</ul>
 		
 		</div>

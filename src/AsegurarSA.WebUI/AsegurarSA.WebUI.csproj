@@ -171,6 +171,7 @@
     <Content Include="Content\themes\AsegurarSA\css\bootstrap.min.css" />
     <Content Include="Content\themes\AsegurarSA\css\colorpicker.css" />
     <Content Include="Content\themes\AsegurarSA\css\datepicker.css" />
+    <Content Include="Content\themes\AsegurarSA\css\font-awesome.css" />
     <Content Include="Content\themes\AsegurarSA\css\fullcalendar.css" />
     <Content Include="Content\themes\AsegurarSA\css\icheck\all.css" />
     <Content Include="Content\themes\AsegurarSA\css\icheck\flat\aero%402x.png" />
@@ -291,6 +292,7 @@
     <Content Include="Content\themes\AsegurarSA\css\select2.css" />
     <Content Include="Content\themes\AsegurarSA\css\unicorn-login.css" />
     <Content Include="Content\themes\AsegurarSA\css\unicorn.blue.css" />
+    <Content Include="Content\themes\AsegurarSA\css\unicorn.css" />
     <Content Include="Content\themes\AsegurarSA\css\unicorn.grey-old.css" />
     <Content Include="Content\themes\AsegurarSA\css\unicorn.grey.css" />
     <Content Include="Content\themes\AsegurarSA\css\unicorn.light-blue.css" />
@@ -299,6 +301,7 @@
     <Content Include="Content\themes\AsegurarSA\css\unicorn.red-green.css" />
     <Content Include="Content\themes\AsegurarSA\css\unicorn.red-yellow.css" />
     <Content Include="Content\themes\AsegurarSA\css\unicorn.red.css" />
+    <Content Include="Content\themes\AsegurarSA\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\themes\AsegurarSA\fonts\glyphiconshalflings-regular.svg" />
     <Content Include="Content\themes\AsegurarSA\img\alpha.png" />
     <Content Include="Content\themes\AsegurarSA\img\breadcrumb.png" />
@@ -445,6 +448,10 @@
     <Content Include="Content\themes\AsegurarSA\img\demo\Thumbs.db" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Content\themes\AsegurarSA\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\themes\AsegurarSA\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\themes\AsegurarSA\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\themes\AsegurarSA\fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap-colorpicker.js" />
     <Content Include="Scripts\bootstrap-datepicker.js" />
