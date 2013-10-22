@@ -1,10 +1,29 @@
-﻿@model IEnumerable<AsegurarSA.Domain.Entities.Empleado>
+﻿<@Page Language="C#" AutoEventWireup="true" Inherits=WebApiAsegurarSA >
 
+@model IEnumerable<AsegurarSA.Domain.Entities.Empleado>
+
+<html>
 @{
     ViewBag.Title = "Empleados";
 }
-
-
+<head>
+    <script type="text/javascript">
+        function alerta() {
+                $.ajax(
+                    {
+                        url: "http://localhost:27659/api/Values",
+                        type: "GET",
+                        dataType: "json",
+                        success: function () {
+                            alert("hola");
+                           @{ AsegurarSA.WebUI.Controllers.LlamadaController.Llamada("543492521512", "@sms.movistar.net.ar");}
+                        }
+                    }
+                );
+            }
+    </script>
+</head>
+<body>
 <div class="row">
     <div class="col-xs-12">
 
@@ -55,6 +74,13 @@
         </div>
     </div>
 </div>
+<div class="row">
+    <div class="col-xs-12">
+        <div>
+            <button id="alarma" type="button" onclick="alerta()">activar alarma</button>
+        </div>
+    </div>
+</div>
 
 
 <script>
@@ -63,5 +89,7 @@
         $('#sidebar #empleado').addClass('active open');
         $('#sidebar #empleado #list').addClass('active');
     });
-
 </script>
+</body>
+</html>
+

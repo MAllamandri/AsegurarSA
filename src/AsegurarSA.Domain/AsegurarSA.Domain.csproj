@@ -67,6 +67,7 @@
     <Compile Include="Concrete\EFClienteRepository.cs" />
     <Compile Include="Concrete\EFDbContext.cs" />
     <Compile Include="Concrete\EFEmpleadoRepository.cs" />
+    <Compile Include="Concrete\EFLlamadaRepository.cs" />
     <Compile Include="Entities\Cliente.cs" />
     <Compile Include="Entities\Empleado.cs" />
     <Compile Include="Migrations\201310181318216_InitialCreate.cs" />

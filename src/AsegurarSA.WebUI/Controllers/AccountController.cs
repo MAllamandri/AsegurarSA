@@ -22,7 +22,7 @@ namespace AsegurarSA.WebUI.Controllers
         [HttpPost]
         public ActionResult Login(AccountModel.LoginViewModel login)
         {
-            bool success = WebSecurity.Login(login.UserName, login.Password, false);
+            bool success = WebSecurity.Login(login.UserName, login.Password);
             if (success)
             {
                 string returnUrl = Request.QueryString["ReturnUrl"];

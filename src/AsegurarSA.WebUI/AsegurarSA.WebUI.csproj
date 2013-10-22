@@ -152,6 +152,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\EmpleadosController.cs" />
+    <Compile Include="Controllers\LlamadaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -542,6 +543,10 @@
     <ProjectReference Include="..\AsegurarSA.Domain\AsegurarSA.Domain.csproj">
       <Project>{81EE8EFA-0A0A-4E8A-A8F2-A907AAD4A461}</Project>
       <Name>AsegurarSA.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebApiAsegurarSA\WebApiAsegurarSA.csproj">
+      <Project>{d530bed5-d1a4-49a0-9376-7954ad0e2120}</Project>
+      <Name>WebApiAsegurarSA</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
