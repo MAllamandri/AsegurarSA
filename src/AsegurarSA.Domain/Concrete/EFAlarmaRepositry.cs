@@ -13,10 +13,10 @@ namespace AsegurarSA.Domain.Concrete
 
         public IQueryable<Alarma> ListaAlarmaCliente(int idCliente)
         {
-            return context.Alarmas.Where(a => a.ClienteId == idCliente);
+            return context.Alarmas.Where(a => a.ClienteId == idCliente && a.FechaBaja == null);
         }
 
-        public Alarma Alarma(int idAlarma)
+        public Alarma BuscarAlarma(int idAlarma)
         {
             return context.Alarmas.FirstOrDefault(a => a.AlarmaId == idAlarma);
         }

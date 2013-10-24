@@ -10,7 +10,7 @@ namespace AsegurarSA.Domain.Abstract
     public interface IAlarmaRepository
     {
         IQueryable<Alarma> ListaAlarmaCliente(int idCliente);
-        Alarma Alarma(int idAlarma);
+        Alarma BuscarAlarma(int idAlarma);
         void SaveAlarma(Alarma alarma);
         void DeleteAlarma(Alarma alarma);
     }
