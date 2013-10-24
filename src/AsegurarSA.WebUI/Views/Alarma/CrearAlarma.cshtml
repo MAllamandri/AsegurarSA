@@ -1,0 +1,55 @@
+﻿@model AsegurarSA.Domain.Entities.Alarma
+
+@{
+    ViewBag.Title = "Nueva alarma";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="widget-box">
+            <div class="widget-title">
+                <span class="icon">
+                    <i class="icon-bell"></i>
+                </span>
+                <h5>Crear nueva alarma</h5>
+            </div>
+            <div class="widget-content nopadding">
+                @using (Html.BeginForm("Editar", "Empleados", FormMethod.Post, new { @class = "form-horizontal" }))
+                {
+                    @Html.HiddenFor(model => model.ClienteId)
+                    <div class="form-group">
+                        
+                        <div class="invoice-to">
+                               <strong> @Model.Cliente.Apellido @Model.Cliente.Nombre </strong>
+                        </div>
+                   
+                    </div>
+                    
+                    <div class="form-group">
+                    
+                    @Html.HiddenFor(model => model.AlarmaId)
+                    
+                        @Html.LabelFor(model => model.Direccion, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.TextBoxFor(model => model.Direccion, new { @class = "form-control input-sm" })
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="form-actions">
+                        <button class="btn btn-primary btn-sm" type="submit">Guardar</button>
+                        or <a href="/Cliente/List" class="text-danger">Cancelar</a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('#sidebar .active').removeClass('active');
+        $('#sidebar #cliente').addClass('active open');
+    });
+</script>
