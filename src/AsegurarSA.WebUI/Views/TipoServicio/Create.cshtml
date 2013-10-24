@@ -1,0 +1,59 @@
+﻿@model AsegurarSA.Domain.Entities.TipoServicio
+
+@{
+    ViewBag.Title = "Editar Tipo de Servicio";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="widget-box">
+            <div class="widget-title">
+                <span class="icon">
+                    <i class="icon-user"></i>
+                </span>
+                <h5>Crear nuevo Tipo de Servicio</h5>
+            </div>
+            <div class="widget-content nopadding">
+                @using (Html.BeginForm("Editar", "TipoServicio", FormMethod.Post, new { @class = "form-horizontal" }))
+                {
+                    @Html.HiddenFor(model => model.TipoId)
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Nombre, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.TextBoxFor(model => model.Nombre, new { @class = "form-control input-sm" })
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Descripcion, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.TextAreaFor(model => model.Descripcion, new {@class = "form-control",  rows=5 })
+                         </div>
+                    </div>
+      
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Costo, new { @class = "control-label" })
+                        <div class="controls">
+                            
+                            @Html.TextBoxFor(model => model.Costo, new { @class = "form-control input-sm" })
+                        </div>
+                    </div>              
+                    <div class="form-actions">
+                        <button class="btn btn-primary btn-sm" type="submit">Guardar</button>
+                        or <a href="/TipoServicios" class="text-danger">Cancelar</a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('#sidebar .active').removeClass('active');
+        $('#sidebar #empleado').addClass('active open');
+        
+        $('.datepicker').datepicker();
+    });
+</script>
