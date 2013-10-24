@@ -23,6 +23,7 @@
 		<meta charset="UTF-8" />
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         @Styles.Render("~/Content/bootstrap/bootstrap.css")
+                <link rel="stylesheet" href="~/Content/themes/AsegurarSA/css/datepicker.css">
         <link rel="stylesheet" href="~/Content/themes/AsegurarSA/css/font-awesome.css">
 	    <link rel="stylesheet" href="~/Content/themes/AsegurarSA/css/fullcalendar.css" />	
         <link rel="stylesheet" href="~/Content/themes/AsegurarSA/css/unicorn.css" />
@@ -38,7 +39,7 @@
 
 		<div id="user-nav">
             <ul class="btn-group">
-                <li class="btn" ><a title="" href="#"><i class="glyphicon glyphicon-user"></i> <span class="text">Profile</span></a></li>
+                <li class="btn" ><a title="" href="#"><i class="glyphicon glyphicon-user"></i> <span class="text"> @User.Identity.Name</span></a></li>
                 <li class="btn dropdown" id="menu-messages"><a href="#" data-toggle="dropdown" data-target="#menu-messages" class="dropdown-toggle"><i class="glyphicon glyphicon-envelope"></i> <span class="text">Messages</span> <span class="label label-danger">5</span> <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a class="sAdd" title="" href="#">new message</a></li>
@@ -95,9 +96,9 @@
 		</div>
 
             <script src="~/Scripts/excanvas.min.js"></script>
-
             <script src="~/Scripts/jquery-ui.custom.js"></script>
-            <script src="~/Scripts/bootstrap.min.js"></script>
+	        <script src="~/Scripts/bootstrap.min.js"></script>
+            <script src="~/Scripts/bootstrap-datepicker.js"></script>
             <script src="~/Scripts/jquery.flot.min.js"></script>
             <script src="~/Scripts/jquery.flot.resize.min.js"></script>
             <script src="~/Scripts/jquery.sparkline.min.js"></script>
@@ -107,3 +108,4 @@
             <script src="~/Scripts/unicorn.dashboard.js"></script>
 	</body>
 </html>
+

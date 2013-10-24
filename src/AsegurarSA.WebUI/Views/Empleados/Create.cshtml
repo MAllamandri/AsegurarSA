@@ -1,46 +1,76 @@
 ﻿@model AsegurarSA.Domain.Entities.Empleado
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Editar Empleado";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Create</h2>
-@using (Html.BeginForm("Editar", "Empleados", FormMethod.Post)) {
-        <fieldset>
-            <legend>Formulario de alta de empleados</legend>
-            @Html.HiddenFor(model => model.EmpleadoId);
-            @Html.HiddenFor(model => model.Eliminado);
-            <div class="editor-label">
-                @Html.LabelFor(model => model.Nombre)
-            </div>
-            <div class="editor-field">
-                @Html.TextBoxFor(model => model.Nombre)
-            </div>
- 
-           <div class="editor-label">
-                @Html.LabelFor(model => model.Apellido)
-            </div>
-            <div class="editor-field">
-                @Html.TextBoxFor(model => model.Apellido)
-            </div>
- 
-           <div class="editor-label">
-                @Html.LabelFor(model => model.Telefono)
-            </div>
-            <div class="editor-field">
-                @Html.TextBoxFor(model => model.Telefono)
-            </div>
- 
-            <div class="editor-label">
-                @Html.LabelFor(model => model.FechaNacimiento)
-            </div>
-            <div class="editor-field">
-                @Html.TextBoxFor(model => model.FechaNacimiento)
-            </div>
 
-            <p>
-                <input type="submit" value="Create" />
-            </p>
-        </fieldset>
-  } 
+        
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="widget-box">
+            <div class="widget-title">
+                <span class="icon">
+                    <i class="icon-user"></i>
+                </span>
+                <h5>Crear nuevo empleado</h5>
+            </div>
+            <div class="widget-content nopadding">
+                @using (Html.BeginForm("Editar", "Empleados", FormMethod.Post, new { @class = "form-horizontal" }))
+                {
+                    @Html.HiddenFor(model => model.EmpleadoId)
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Nombre, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.TextBoxFor(model => model.Nombre, new { @class = "form-control input-sm" })
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Apellido, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.TextBoxFor(model => model.Apellido, new { @class = "form-control input-sm" })
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.UserName, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.TextBoxFor(model => model.UserName, new { @class = "form-control input-sm" })
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.FechaNacimiento, new { @class = "control-label" })
+                        <div class="controls">
+                            <input id="FechaNacimiento" name="FechaNacimiento" type="text" value='@Model.FechaNacimiento.ToString("d")' class="datepicker form-control input-sm" data-date-format="dd-mm-yyyy" data-date='@Model.FechaNacimiento.ToString("d")' />
+                        </div>
+                    </div>                   
+                  
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Telefono, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.TextBoxFor(model => model.Telefono, new { @class = "form-control input-sm" })
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button class="btn btn-primary btn-sm" type="submit">Guardar</button>
+                        or <a href="/Empleados" class="text-danger">Cancelar</a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('#sidebar .active').removeClass('active');
+        $('#sidebar #empleado').addClass('active open');
+        
+        $('.datepicker').datepicker();
+    });
+</script>

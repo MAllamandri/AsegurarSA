@@ -9,7 +9,8 @@ using AsegurarSA.Domain.Entities;
 namespace AsegurarSA.WebUI.Controllers
 {
     [Authorize    ]
-    public class EmpleadosController : Controller
+    public class 
+        EmpleadosController : Controller
     {
         // GET: /Empleados/
         private IEmpleadoRepository _repository;
@@ -42,13 +43,13 @@ namespace AsegurarSA.WebUI.Controllers
 
         public ActionResult Modificar(int EmpleadoId=0)
         {
-            Empleado empleado = _repository.Empleados.Where(e => e.EmpleadoId == EmpleadoId).FirstOrDefault();
+            var empleado = _repository.Empleados.FirstOrDefault(e => e.EmpleadoId == EmpleadoId);
             return RedirectToAction("Create",empleado);
         }
 
         public ActionResult Delete(int EmpleadoId = 0)
         {
-            Empleado empleado = _repository.Empleados.Where(e => e.EmpleadoId == EmpleadoId).FirstOrDefault();
+            var empleado = _repository.Empleados.FirstOrDefault(e => e.EmpleadoId == EmpleadoId);
             _repository.DeleteEmpleado(empleado);
             return RedirectToAction("List");
         }

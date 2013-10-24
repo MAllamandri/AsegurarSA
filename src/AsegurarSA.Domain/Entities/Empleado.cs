@@ -22,9 +22,9 @@ namespace AsegurarSA.Domain.Entities
         [Required]
         public string Telefono { get; set; }
 
-        [DataType(DataType.Date)]
         [Required]
         [Display(Name="Fecha Nacimiento")]
+        [DataType(DataType.Date)]
         public DateTime FechaNacimiento { get; set; }
         public Boolean Eliminado { get; set; }
     }
