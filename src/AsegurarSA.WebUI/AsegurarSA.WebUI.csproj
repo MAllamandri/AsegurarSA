@@ -153,7 +153,6 @@
     <Compile Include="Controllers\AlarmaController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\EmpleadosController.cs" />
-    <Compile Include="Controllers\LlamadaaController.cs" />
     <Compile Include="Controllers\TipoServicioController.cs" />
     <Compile Include="Controllers\LlamadaController.cs" />
     <Compile Include="Global.asax.cs">
