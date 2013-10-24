@@ -32,6 +32,7 @@ namespace AsegurarSA.WebUI.Infraestructura
             // put bindings here
             ninjectKernel.Bind<IEmpleadoRepository>().To<EFEmpleadoRepository>();
             ninjectKernel.Bind<IClienteRepository>().To<EFClienteRepository>();
+            ninjectKernel.Bind<IAlarmaRepository>().To<EFAlarmaRepositry>();
 
         }
     }

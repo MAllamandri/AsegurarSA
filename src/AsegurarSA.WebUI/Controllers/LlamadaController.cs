@@ -9,9 +9,9 @@ using  System.Web.Http.Routing;
 
 namespace AsegurarSA.WebUI.Controllers
 {
-    public class LlamadaaController : ApiController
+    public class LlamadaController : ApiController
     {
-        public void Get()
+        public int Get(int alarmaId)
         {
             //"543492521512", "@sms.movistar.net.ar"
             //@alertas.personal.com.ar    @sms.ctimovil.com.ar
@@ -21,6 +21,7 @@ namespace AsegurarSA.WebUI.Controllers
             mySmtpClient.Credentials = nc;
             mySmtpClient.EnableSsl = true;
             mySmtpClient.Send(message);
+            return alarmaId;
 
         }
     }

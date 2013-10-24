@@ -64,9 +64,12 @@
   <ItemGroup>
     <Compile Include="Abstract\IClienteRepository.cs" />
     <Compile Include="Abstract\IEmpleadoRepository.cs" />
+    <Compile Include="Abstract\IAlarmaRepository.cs" />
+    <Compile Include="Concrete\EFAlarmaRepositry.cs" />
     <Compile Include="Concrete\EFClienteRepository.cs" />
     <Compile Include="Concrete\EFDbContext.cs" />
     <Compile Include="Concrete\EFEmpleadoRepository.cs" />
+    <Compile Include="Entities\Alarma.cs" />
     <Compile Include="Entities\Cliente.cs" />
     <Compile Include="Entities\Empleado.cs" />
     <Compile Include="Migrations\201310181318216_InitialCreate.cs" />
@@ -97,6 +100,10 @@
     <Compile Include="Migrations\201310200227576_Login1.Designer.cs">
       <DependentUpon>201310200227576_Login1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201310241929382_alarma.cs" />
+    <Compile Include="Migrations\201310241929382_alarma.Designer.cs">
+      <DependentUpon>201310241929382_alarma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -125,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201310200227576_Login1.resx">
       <DependentUpon>201310200227576_Login1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310241929382_alarma.resx">
+      <DependentUpon>201310241929382_alarma.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

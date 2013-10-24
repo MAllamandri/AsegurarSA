@@ -150,9 +150,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AlarmaController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\EmpleadosController.cs" />
-    <Compile Include="Controllers\LlamadaaController.cs" />
+    <Compile Include="Controllers\LlamadaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -376,6 +377,7 @@
     <Content Include="Content\themes\AsegurarSA\img\larrow.png" />
     <Content Include="Content\themes\AsegurarSA\img\line.png" />
     <Content Include="Content\themes\AsegurarSA\img\log2o.png" />
+    <Content Include="Content\themes\AsegurarSA\img\logo.png" />
     <Content Include="Content\themes\AsegurarSA\img\menu-active.png" />
     <Content Include="Content\themes\AsegurarSA\img\rarrow.png" />
     <Content Include="Content\themes\AsegurarSA\img\saturation.png" />
@@ -532,6 +534,7 @@
     <Content Include="Views\Cliente\List.cshtml" />
     <Content Include="Views\Shared\_SimpleLayout.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Alarma\CrearAlarma.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

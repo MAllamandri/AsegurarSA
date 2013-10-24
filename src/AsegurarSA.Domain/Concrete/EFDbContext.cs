@@ -11,5 +11,6 @@ namespace AsegurarSA.Domain.Concrete
     {
         public DbSet<Empleado> Empleados { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Alarma> Alarmas { get; set; }
     }
 }
