@@ -13,9 +13,9 @@ namespace AsegurarSA.WebUI.Controllers
     {
         public int Get(int alarmaId)
         {
-            //"543492521512", "@sms.movistar.net.ar"
+            //"543492521512", "@sms.movistar.net.ar"  "543492693251@sms.ctimovil.com.ar"
             //@alertas.personal.com.ar    @sms.ctimovil.com.ar
-            MailMessage message = new MailMessage("asegurarsa.metodos@gmail.com", "543404538247@sms.ctimovil.com.ar", "Alarma activada", "Su alarma esta sonando");
+            MailMessage message = new MailMessage("asegurarsa.metodos@gmail.com", "543492521512@sms.movistar.net.ar", "Alarma activada", "Su alarma esta sonando");
             SmtpClient mySmtpClient = new SmtpClient("smtp.gmail.com");
             NetworkCredential nc = new NetworkCredential("asegurarsa.metodos@gmail.com", "metodosagiles");
             mySmtpClient.Credentials = nc;

@@ -1,0 +1,114 @@
+﻿@model AsegurarSA.Domain.Entities.Empleado
+
+@{
+    ViewBag.Title = "Crear nuevo empleado";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="widget-box">
+            <div class="widget-title">
+                <span class="icon">
+                    <i class="icon-user"></i>
+                </span>
+                <h5>Crear nuevo empleado</h5>
+            </div>
+            <div class="widget-content nopadding">
+                @using (Html.BeginForm("Editar", "Empleados", FormMethod.Post, new { @class = "form-horizontal" }))
+                {
+                    @Html.HiddenFor(model => model.EmpleadoId)
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Nombre, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.TextBoxFor(model => model.Nombre, new { @class = "form-control input-sm" })
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Apellido, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.TextBoxFor(model => model.Apellido, new { @class = "form-control input-sm" })
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.UserName, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.TextBoxFor(model => model.UserName, new { @class = "form-control input-sm" })
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Password, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.TextBoxFor(model => model.Password, new { @class = "form-control input-sm" })
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.FechaNacimiento, new { @class = "control-label" })
+                        <div class="controls">
+                            <input id="FechaNacimiento" name="FechaNacimiento" type="text" value='' class="datepicker form-control input-sm" data-date-format="dd-mm-yyyy" data-date='' />                            
+                        </div>
+                    </div>
+                    
+                    @*
+                    
+                    <div class="form-group">
+
+                        @Html.LabelFor(model => model.FechaNacimiento, new { @class = "control-label" })
+                        <div class="controls">
+                        </div>
+                    </div>*@
+                  
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Telefono, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.TextBoxFor(model => model.Telefono, new { @class = "form-control input-sm" })
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Empresa, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.DropDownList("select",new List<SelectListItem>
+                            {
+                                new SelectListItem{ Text = "Claro", Value = "0" },
+                                new SelectListItem{ Text = "Personal", Value = "1" }, 
+                                new SelectListItem{ Text = "Movistar", Value = "2" }
+                            }) </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Celular, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.TextBoxFor(model => model.Celular, new { @class = "form-control input-sm" })
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Celular, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.TextBoxFor(model => model.Celular, new { @class = "form-control input-sm" })
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button class="btn btn-primary btn-sm" type="submit">Guardar</button>
+                        or <a href="/Empleados" class="text-danger">Cancelar</a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('#sidebar .active').removeClass('active');
+        $('#sidebar #empleado').addClass('active open');
+        
+        $('.datepicker').datepicker();
+    });
+</script>
