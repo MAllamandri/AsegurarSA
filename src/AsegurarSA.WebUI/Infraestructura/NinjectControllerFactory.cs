@@ -36,6 +36,7 @@ namespace AsegurarSA.WebUI.Infraestructura
             ninjectKernel.Bind<ITipoServicio>().To<EFTipoServicioRepository>();
 
             ninjectKernel.Bind<IAlarmaRepository>().To<EFAlarmaRepositry>();
+            ninjectKernel.Bind<IEventoRepository>().To<EFEventoRepository>();
 
         }
     }

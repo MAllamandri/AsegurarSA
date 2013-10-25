@@ -40,5 +40,15 @@ namespace AsegurarSA.Domain.Concrete
             context.SaveChanges();
         }
 
+        public Cliente ObtenerCliente(int idCliente)
+        {
+            if (idCliente != 0)
+            {
+                Cliente cliente = context.Clientes.Where(c => c.ClienteId == idCliente && c.Eliminado != true).FirstOrDefault();
+                return cliente;
+            }
+            return null;
+        }
+
     }
 }

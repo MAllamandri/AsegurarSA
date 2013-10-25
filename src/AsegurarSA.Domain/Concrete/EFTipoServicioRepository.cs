@@ -13,7 +13,7 @@ namespace AsegurarSA.Domain.Concrete
 
         public IQueryable<Entities.TipoServicio> TipoServicio
         {
-            get { return context.TipoServicios; }
+            get { return context.TipoServicios.Where(t=> t.Eliminado == false); }
         }
 
         public void SaveTipoServicio(TipoServicio servicio)
