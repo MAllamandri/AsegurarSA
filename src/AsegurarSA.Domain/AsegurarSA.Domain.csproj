@@ -64,8 +64,10 @@
   <ItemGroup>
     <Compile Include="Abstract\IClienteRepository.cs" />
     <Compile Include="Abstract\IEmpleadoRepository.cs" />
+    <Compile Include="Abstract\IEventoRepository.cs" />
     <Compile Include="Abstract\ITipoServicio.cs" />
     <Compile Include="Concrete\EFClienteRepository.cs" />
+    <Compile Include="Concrete\EFEventoRepository.cs" />
     <Compile Include="Concrete\EFTipoServicioRepository.cs" />
     <Compile Include="Abstract\IAlarmaRepository.cs" />
     <Compile Include="Concrete\EFAlarmaRepositry.cs" />
@@ -74,6 +76,7 @@
     <Compile Include="Entities\Alarma.cs" />
     <Compile Include="Entities\Cliente.cs" />
     <Compile Include="Entities\Empleado.cs" />
+    <Compile Include="Entities\Evento.cs" />
     <Compile Include="Entities\TipoServicio.cs" />
     <Compile Include="Migrations\201310181318216_InitialCreate.cs" />
     <Compile Include="Migrations\201310181318216_InitialCreate.Designer.cs">
@@ -115,6 +118,10 @@
     <Compile Include="Migrations\201310242232547_cambios.Designer.cs">
       <DependentUpon>201310242232547_cambios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201310250046480_Eventos.cs" />
+    <Compile Include="Migrations\201310250046480_Eventos.Designer.cs">
+      <DependentUpon>201310250046480_Eventos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -152,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201310242232547_cambios.resx">
       <DependentUpon>201310242232547_cambios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310250046480_Eventos.resx">
+      <DependentUpon>201310250046480_Eventos.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -36,7 +36,7 @@
                                 <td>@t.Descripcion</td>
                                 <td>@t.Costo</td>
                                 <td><a href= "@Url.Action("Modificar", "TipoServicio", new { TipoServicioId = @t.TipoId })"><i class="glyphicon glyphicon-edit" /></a></td>
-                                <td><a href="@Url.Action("Delete", "TipoServicio", new { TipoServicioId = @t.TipoId })"><i class="glyphicon glyphicon-remove" /></a></td>
+                                <td><a href="@Url.Action("Delete", "TipoServicio", new { tipoServicioId = @t.TipoId })"><i class="glyphicon glyphicon-remove" /></a></td>
                             </tr>
                         }
 
