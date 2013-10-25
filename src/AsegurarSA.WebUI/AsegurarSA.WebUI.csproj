@@ -540,6 +540,7 @@
     <Content Include="Views\TipoServicio\Create.cshtml" />
     <Content Include="Views\Alarma\CrearAlarma.cshtml" />
     <Content Include="Views\Alarma\ListaAlarmaCliente.cshtml" />
+    <Content Include="Views\Empleados\CrearEmpleado.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -76,47 +76,12 @@
     <Compile Include="Entities\Alarma.cs" />
     <Compile Include="Entities\Cliente.cs" />
     <Compile Include="Entities\Empleado.cs" />
+    <Compile Include="Entities\Empresa.cs" />
     <Compile Include="Entities\Evento.cs" />
     <Compile Include="Entities\TipoServicio.cs" />
-    <Compile Include="Migrations\201310181318216_InitialCreate.cs" />
-    <Compile Include="Migrations\201310181318216_InitialCreate.Designer.cs">
-      <DependentUpon>201310181318216_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201310181319544_initial.cs" />
-    <Compile Include="Migrations\201310181319544_initial.Designer.cs">
-      <DependentUpon>201310181319544_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201310181336489_empleado eliminado.cs" />
-    <Compile Include="Migrations\201310181336489_empleado eliminado.Designer.cs">
-      <DependentUpon>201310181336489_empleado eliminado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201310181419132_Required fields.cs" />
-    <Compile Include="Migrations\201310181419132_Required fields.Designer.cs">
-      <DependentUpon>201310181419132_Required fields.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201310182053222_AgregarClientes.cs" />
-    <Compile Include="Migrations\201310182053222_AgregarClientes.Designer.cs">
-      <DependentUpon>201310182053222_AgregarClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201310200208007_Login.cs" />
-    <Compile Include="Migrations\201310200208007_Login.Designer.cs">
-      <DependentUpon>201310200208007_Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201310200227576_Login1.cs" />
-    <Compile Include="Migrations\201310200227576_Login1.Designer.cs">
-      <DependentUpon>201310200227576_Login1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201310241932011_Tiposervicio.cs" />
-    <Compile Include="Migrations\201310241932011_Tiposervicio.Designer.cs">
-      <DependentUpon>201310241932011_Tiposervicio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201310241929382_alarma.cs" />
-    <Compile Include="Migrations\201310241929382_alarma.Designer.cs">
-      <DependentUpon>201310241929382_alarma.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201310242232547_cambios.cs" />
-    <Compile Include="Migrations\201310242232547_cambios.Designer.cs">
-      <DependentUpon>201310242232547_cambios.cs</DependentUpon>
+    <Compile Include="Migrations\201310250047350_initial.cs" />
+    <Compile Include="Migrations\201310250047350_initial.Designer.cs">
+      <DependentUpon>201310250047350_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201310250046480_Eventos.cs" />
     <Compile Include="Migrations\201310250046480_Eventos.Designer.cs">
@@ -134,6 +99,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Service References\" />
     <EmbeddedResource Include="Migrations\201310181318216_InitialCreate.resx">
       <DependentUpon>201310181318216_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,7 +138,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
+    <EmbeddedResource Include="Migrations\201310250047350_initial.resx">
+      <DependentUpon>201310250047350_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -47,6 +47,17 @@ namespace AsegurarSA.WebUI.Controllers
             return RedirectToAction("Create",empleado);
         }
 
+
+        public ActionResult CrearEmpleado()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult CrearEmpleado(Empleado empleado)
+        {
+            return View();
+        }
         public ActionResult Delete(int EmpleadoId = 0)
         {
             var empleado = _repository.Empleados.FirstOrDefault(e => e.EmpleadoId == EmpleadoId);
