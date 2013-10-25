@@ -22,9 +22,6 @@ namespace AsegurarSA.Domain.Entities
         public string Telefono { get; set; }
 
         public string Password { get; set; }
-
-        public int EmpresaId { get; set; }
-        public virtual Empresa Empresa { get; set; }
         public string Celular { get; set; }
         [Required]
         [Display(Name="Fecha Nacimiento")]
