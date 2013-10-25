@@ -122,6 +122,10 @@
     <Compile Include="Migrations\201310250046480_Eventos.Designer.cs">
       <DependentUpon>201310250046480_Eventos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201310250059377_Eventos1.cs" />
+    <Compile Include="Migrations\201310250059377_Eventos1.Designer.cs">
+      <DependentUpon>201310250059377_Eventos1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -162,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201310250046480_Eventos.resx">
       <DependentUpon>201310250046480_Eventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310250059377_Eventos1.resx">
+      <DependentUpon>201310250059377_Eventos1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

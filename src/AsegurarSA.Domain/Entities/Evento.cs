@@ -7,7 +7,7 @@ using System.Text;
 
 namespace AsegurarSA.Domain.Entities
 {
-
+    [Table("Eventos")]
     public class Evento
     {
         [Key]
