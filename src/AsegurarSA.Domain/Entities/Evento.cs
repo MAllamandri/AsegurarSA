@@ -11,7 +11,6 @@ namespace AsegurarSA.Domain.Entities
     public class Evento
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int EventoId { get; set; }
         public DateTime Fecha { get; set; }
         public int ClienteId { get; set; }

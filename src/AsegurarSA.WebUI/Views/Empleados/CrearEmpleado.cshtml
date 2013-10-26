@@ -51,46 +51,12 @@
                         <div class="controls">
                             <input id="FechaNacimiento" name="FechaNacimiento" type="text" value='' class="datepicker form-control input-sm" data-date-format="dd-mm-yyyy" data-date='' />                            
                         </div>
-                    </div>
-                    
-                    @*
-                    
-                    <div class="form-group">
-
-                        @Html.LabelFor(model => model.FechaNacimiento, new { @class = "control-label" })
-                        <div class="controls">
-                        </div>
-                    </div>*@
-                  
+                    </div>                   
+                 
                     <div class="form-group">
                         @Html.LabelFor(model => model.Telefono, new { @class = "control-label" })
                         <div class="controls">
                             @Html.TextBoxFor(model => model.Telefono, new { @class = "form-control input-sm" })
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Empresa, new { @class = "control-label" })
-                        <div class="controls">
-                            @Html.DropDownList("select",new List<SelectListItem>
-                            {
-                                new SelectListItem{ Text = "Claro", Value = "0" },
-                                new SelectListItem{ Text = "Personal", Value = "1" }, 
-                                new SelectListItem{ Text = "Movistar", Value = "2" }
-                            }) </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Celular, new { @class = "control-label" })
-                        <div class="controls">
-                            @Html.TextBoxFor(model => model.Celular, new { @class = "form-control input-sm" })
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Celular, new { @class = "control-label" })
-                        <div class="controls">
-                            @Html.TextBoxFor(model => model.Celular, new { @class = "form-control input-sm" })
                         </div>
                     </div>
                     

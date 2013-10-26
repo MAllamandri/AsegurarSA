@@ -29,6 +29,13 @@ namespace AsegurarSA.Domain.Migrations
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data. E.g.
             //
+            context.Empresas.AddOrUpdate(
+                e => e.EmpresaId,
+                    new Empresa { EmpresaId = 1, Descripcion = "Claro" },
+                    new Empresa { EmpresaId = 2, Descripcion = "Personal" },
+                    new Empresa { EmpresaId = 3, Descripcion = "Movistar" }
+                );
+
             context.Empleados.AddOrUpdate(
               p => p.Nombre,
              //   new Empleado { UserName = "pibarra", Nombre = "Pablo", Apellido = "Ibarra", FechaNacimiento = DateTime.Now,Telefono = "554564"},
@@ -37,20 +44,17 @@ namespace AsegurarSA.Domain.Migrations
                 new Empleado { UserName = "ekuschnir", Nombre = "Ezequiel", Apellido = "Kuschnir", FechaNacimiento = DateTime.Now, Telefono = "554564", Eliminado = false },
                 new Empleado { UserName = "everonesse", Nombre = "Estefano", Apellido = "Veronesse", FechaNacimiento = DateTime.Now, Telefono = "554564", Eliminado = false }
             );
+
             context.Clientes.AddOrUpdate(
                 c => c.Nombre,
-                    new Cliente { Nombre = "Lucas", Apellido = "Rodriguez", Telefono1 = "554564", Telefono2 = "554564", Domicilio = "JJ 201", EmpresaId = 1},
-                    new Cliente { Nombre = "Diego", Apellido = "Veronesse", Telefono1 = "554564", Telefono2 = "554564", Domicilio = "CC 201", EmpresaId = 2 },
-                    new Cliente { Nombre = "Mariano", Apellido = "Ferrero", Telefono1 = "554564", Telefono2 = "554564", Domicilio = "AA 201", EmpresaId =3 },
-                    new Cliente { Nombre = "Pedro", Apellido = "LaPrida", Telefono1 = "554564", Telefono2 = "554564", Domicilio = "DD 201", EmpresaId =3 },
-                    new Cliente { Nombre = "Ignacio", Apellido = "Santos", Telefono1 = "554564", Telefono2 = "554564", Domicilio = "EE 201", EmpresaId = 1 }
+                    new Cliente { Nombre = "Lucas", Apellido = "Rodriguez", Telefono1 = "554564", Telefono2 = "554564", Domicilio = "JJ 201", Eliminado = false, EmpresaId = 2},
+                    new Cliente { Nombre = "Diego", Apellido = "Veronesse", Telefono1 = "554564", Telefono2 = "554564", Domicilio = "CC 201", Eliminado = false, EmpresaId = 3 },
+                    new Cliente { Nombre = "Mariano", Apellido = "Ferrero", Telefono1 = "554564", Telefono2 = "554564", Domicilio = "AA 201", Eliminado = false, EmpresaId = 2 },
+                    new Cliente { Nombre = "Pedro", Apellido = "LaPrida", Telefono1 = "554564", Telefono2 = "554564", Domicilio = "DD 201", Eliminado = false, EmpresaId = 1 },
+                    new Cliente { Nombre = "Ignacio", Apellido = "Santos", Telefono1 = "554564", Telefono2 = "554564", Domicilio = "EE 201", Eliminado = false, EmpresaId = 2 }
                 );
 
-            context.Empresas.AddOrUpdate(
-                e => e.EmpresaId,
-                    new Empresa { Descripcion = "Claro"},
-                    new Empresa { Descripcion = "Personal"},
-                    new Empresa { Descripcion = "Movistar"});
+
 
             WebMatrix.WebData.WebSecurity.InitializeDatabaseConnection("EFDbContext",
    "Empleados", "EmpleadoId", "UserName", autoCreateTables: true);
@@ -77,9 +81,9 @@ namespace AsegurarSA.Domain.Migrations
                 membership.CreateUserAndAccount("pibarra", "admin", false, user);
                     // new { Nombre = "Pablo" });//("pibarra", "admin",null,null,null,true,null,out e);
             }
-            if (!roles.GetRolesForUser("pibarra").Contains("root"))
+            if (!roles.GetRolesForUser("pibarra").Contains("Root"))
             {
-                roles.AddUsersToRoles(new[] { "pibarra" }, new[] { "root" });
+                roles.AddUsersToRoles(new[] { "pibarra" }, new[] { "Root" });
             }
             //if (membership.GetUser("joe", false) == null)
             //{

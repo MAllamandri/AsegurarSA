@@ -40,8 +40,6 @@ namespace AsegurarSA.Domain.Concrete
                     user.Add("Apellido", empleado.Apellido);
                     user.Add("FechaNacimiento", empleado.FechaNacimiento);
                     user.Add("Telefono", empleado.Telefono);
-                    user.Add("Celular", empleado.Celular);
-                    user.Add("EmpresaId", empleado.EmpresaId);
 
                     var e = new MembershipCreateStatus();
                     membership.CreateUserAndAccount(empleado.UserName, empleado.Password, false, user);

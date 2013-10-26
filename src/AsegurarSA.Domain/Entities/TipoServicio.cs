@@ -11,8 +11,7 @@ namespace AsegurarSA.Domain.Entities
     public class TipoServicio
     {
         [Key]
-        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
-        public  int TipoId { get; set; }
+        public  int TipoServicioId { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public decimal Costo { get; set; }

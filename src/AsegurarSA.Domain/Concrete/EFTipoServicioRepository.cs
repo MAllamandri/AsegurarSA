@@ -18,7 +18,7 @@ namespace AsegurarSA.Domain.Concrete
 
         public void SaveTipoServicio(TipoServicio servicio)
         {
-            if (servicio.TipoId != 0)
+            if (servicio.TipoServicioId != 0)
             {
                 context.Entry(servicio).State = System.Data.Entity.EntityState.Modified;
             }

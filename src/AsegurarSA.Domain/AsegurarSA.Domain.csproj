@@ -76,13 +76,12 @@
     <Compile Include="Entities\Alarma.cs" />
     <Compile Include="Entities\Cliente.cs" />
     <Compile Include="Entities\Empleado.cs" />
-    <Compile Include="Entities\Empresa.cs" />
     <Compile Include="Entities\Evento.cs" />
     <Compile Include="Entities\Empresa.cs" />
     <Compile Include="Entities\TipoServicio.cs" />
-    <Compile Include="Migrations\201310260332042_Inicial01.cs" />
-    <Compile Include="Migrations\201310260332042_Inicial01.Designer.cs">
-      <DependentUpon>201310260332042_Inicial01.cs</DependentUpon>
+    <Compile Include="Migrations\201310260454500_InicialFuncionado.cs" />
+    <Compile Include="Migrations\201310260454500_InicialFuncionado.Designer.cs">
+      <DependentUpon>201310260454500_InicialFuncionado.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,8 +94,8 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201310260332042_Inicial01.resx">
-      <DependentUpon>201310260332042_Inicial01.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201310260454500_InicialFuncionado.resx">
+      <DependentUpon>201310260454500_InicialFuncionado.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

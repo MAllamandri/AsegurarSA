@@ -17,7 +17,7 @@
             <div class="widget-content nopadding">
                 @using (Html.BeginForm("Editar", "TipoServicio", FormMethod.Post, new { @class = "form-horizontal" }))
                 {
-                    @Html.HiddenFor(model => model.TipoId)
+                    @Html.HiddenFor(model => model.TipoServicioId)
                     <div class="form-group">
                         @Html.LabelFor(model => model.Nombre, new { @class = "control-label" })
                         <div class="controls">
@@ -52,7 +52,7 @@
 <script>
     $(document).ready(function() {
         $('#sidebar .active').removeClass('active');
-        $('#sidebar #empleado').addClass('active open');
+        $('#sidebar #tiposervicio').addClass('active open');
         
         $('.datepicker').datepicker();
     });

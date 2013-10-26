@@ -43,13 +43,13 @@ namespace AsegurarSA.WebUI.Controllers
 
         public ActionResult Modificar(int TipoServicioId = 0)
         {
-            var tipoServicio = _repository.TipoServicio.FirstOrDefault(e => e.TipoId == TipoServicioId);
+            var tipoServicio = _repository.TipoServicio.FirstOrDefault(e => e.TipoServicioId == TipoServicioId);
             return RedirectToAction("Create", tipoServicio);
         }
 
         public ActionResult Delete(int tipoServicioId = 0)
         {
-            var tipoServicio = _repository.TipoServicio.FirstOrDefault(e => e.TipoId == tipoServicioId);
+            var tipoServicio = _repository.TipoServicio.FirstOrDefault(e => e.TipoServicioId == tipoServicioId);
             _repository.DeleteTipoServicio(tipoServicio);
             return RedirectToAction("List");
         }
