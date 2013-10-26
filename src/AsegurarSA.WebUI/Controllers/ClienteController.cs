@@ -5,7 +5,6 @@ using System.Web;
 using System.Web.Mvc;
 using AsegurarSA.Domain.Abstract;
 using AsegurarSA.Domain.Entities;
-using AsegurarSA.Domain.Migrations;
 
 namespace AsegurarSA.WebUI.Controllers
 {

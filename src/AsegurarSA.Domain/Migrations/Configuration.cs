@@ -19,7 +19,7 @@ namespace AsegurarSA.Domain.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(EFDbContext context)
@@ -32,10 +32,10 @@ namespace AsegurarSA.Domain.Migrations
             context.Empleados.AddOrUpdate(
               p => p.Nombre,
              //   new Empleado { UserName = "pibarra", Nombre = "Pablo", Apellido = "Ibarra", FechaNacimiento = DateTime.Now,Telefono = "554564"},
-                new Empleado { UserName = "mallamandri", Nombre = "Maximiliano", Apellido = "Allamandri", FechaNacimiento = DateTime.Now, Telefono = "554564" },
-                new Empleado { UserName = "mfrund", Nombre = "Marcos", Apellido = "Frund", FechaNacimiento = DateTime.Now, Telefono = "554564" },
-                new Empleado { UserName = "ekuschnir", Nombre = "Ezequiel", Apellido = "Kuschnir", FechaNacimiento = DateTime.Now, Telefono = "554564" },
-                new Empleado { UserName = "everonesse", Nombre = "Estefano", Apellido = "Veronesse", FechaNacimiento = DateTime.Now, Telefono = "554564" }
+                new Empleado { UserName = "mallamandri", Nombre = "Maximiliano", Apellido = "Allamandri", FechaNacimiento = DateTime.Now, Telefono = "554564",Eliminado = false},
+                new Empleado { UserName = "mfrund", Nombre = "Marcos", Apellido = "Frund", FechaNacimiento = DateTime.Now, Telefono = "554564", Eliminado = false },
+                new Empleado { UserName = "ekuschnir", Nombre = "Ezequiel", Apellido = "Kuschnir", FechaNacimiento = DateTime.Now, Telefono = "554564", Eliminado = false },
+                new Empleado { UserName = "everonesse", Nombre = "Estefano", Apellido = "Veronesse", FechaNacimiento = DateTime.Now, Telefono = "554564", Eliminado = false }
             );
             context.Clientes.AddOrUpdate(
                 c => c.Nombre,
@@ -57,15 +57,15 @@ namespace AsegurarSA.Domain.Migrations
             }
             if (membership.GetUser("pibarra", false) == null)
             {
-                IDictionary<string, object> openWith =
+                IDictionary<string, object> user =
                     new Dictionary<string, object>();
-                openWith.Add("Nombre","Pablo");
-                openWith.Add("Apellido", "Ibarra");
-                openWith.Add("FechaNacimiento", DateTime.Now);
-                openWith.Add("Telefono","565758");
-
+                user.Add("Nombre","Pablo");
+                user.Add("Apellido", "Ibarra");
+                user.Add("FechaNacimiento", DateTime.Now);
+                user.Add("Telefono","565758");
+                user.Add("Eliminado", "false");
                 var e = new MembershipCreateStatus();
-                membership.CreateUserAndAccount("pibarra", "admin", false, openWith);
+                membership.CreateUserAndAccount("pibarra", "admin", false, user);
                     // new { Nombre = "Pablo" });//("pibarra", "admin",null,null,null,true,null,out e);
             }
             if (!roles.GetRolesForUser("pibarra").Contains("Admin"))
