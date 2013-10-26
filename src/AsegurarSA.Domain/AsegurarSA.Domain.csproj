@@ -65,10 +65,12 @@
     <Compile Include="Abstract\IClienteRepository.cs" />
     <Compile Include="Abstract\IEmpleadoRepository.cs" />
     <Compile Include="Abstract\ITipoServicio.cs" />
+    <Compile Include="Abstract\IAlarmaRepository.cs" />
+    <Compile Include="Concrete\EFAlarmaRepositry.cs" />
     <Compile Include="Concrete\EFClienteRepository.cs" />
     <Compile Include="Concrete\EFDbContext.cs" />
     <Compile Include="Concrete\EFEmpleadoRepository.cs" />
-    <Compile Include="Concrete\EFTipoServicioRepository.cs" />
+    <Compile Include="Entities\Alarma.cs" />
     <Compile Include="Entities\Cliente.cs" />
     <Compile Include="Entities\Empleado.cs" />
     <Compile Include="Entities\TipoServicio.cs" />
@@ -104,6 +106,10 @@
     <Compile Include="Migrations\201310241932011_Tiposervicio.Designer.cs">
       <DependentUpon>201310241932011_Tiposervicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201310241929382_alarma.cs" />
+    <Compile Include="Migrations\201310241929382_alarma.Designer.cs">
+      <DependentUpon>201310241929382_alarma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -135,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201310241932011_Tiposervicio.resx">
       <DependentUpon>201310241932011_Tiposervicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310241929382_alarma.resx">
+      <DependentUpon>201310241929382_alarma.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
