@@ -14,7 +14,7 @@
                 <h5>Crear nueva alarma</h5>
             </div>
             <div class="widget-content nopadding">
-                @using (Html.BeginForm("Editar", "Empleados", FormMethod.Post, new { @class = "form-horizontal" }))
+                @using (Html.BeginForm("SaveAlarma", "Alarma", FormMethod.Post, new { @class = "form-horizontal" }))
                 {
                     @Html.HiddenFor(model => model.ClienteId)
                     <div class="form-group">

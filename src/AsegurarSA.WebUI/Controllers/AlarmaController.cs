@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Routing;
 using AsegurarSA.Domain.Abstract;
 using AsegurarSA.Domain.Entities;
+using AsegurarSA.WebUI.Models;
 
 namespace AsegurarSA.WebUI.Controllers
 {
@@ -31,8 +33,28 @@ namespace AsegurarSA.WebUI.Controllers
 
         public ActionResult ListaAlarmaCliente(int clienteId)
         {
-            var alarmas = _repository.ListaAlarmaCliente(clienteId);
-            return View(alarmas);
+            var model = new AlarmaViewModel.AlarmaView()
+            {
+                listaAlarmas = _repository.ListaAlarmaCliente(clienteId),
+                cliente = _clienterepository.Cliente.FirstOrDefault(c => c.ClienteId == clienteId)
+            };
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult SaveAlarma(Alarma alarma)
+        {
+
+            _repository.SaveAlarma(alarma);
+            return RedirectToAction("ListaAlarmaCliente", "Alarma", new {clienteId = alarma.ClienteId});
+            //return RedirectToAction("List", "Empleados");
+        }
+
+        public ActionResult DeleteAlarma(int AlarmaId=0)
+        {
+            Alarma alarma = _repository.BuscarAlarma(AlarmaId);
+            _repository.DeleteAlarma(alarma);
+            return RedirectToAction("ListaAlarmaCliente", "Alarma", new { clienteId = alarma.ClienteId });
         }
     }
 }

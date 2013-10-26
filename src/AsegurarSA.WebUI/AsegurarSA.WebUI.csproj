@@ -160,6 +160,7 @@
     </Compile>
     <Compile Include="Infraestructura\NinjectControllerFactory.cs" />
     <Compile Include="Models\AccountModel.cs" />
+    <Compile Include="Models\AlarmaViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -538,6 +539,7 @@
     <Content Include="Views\TipoServicio\List.cshtml" />
     <Content Include="Views\TipoServicio\Create.cshtml" />
     <Content Include="Views\Alarma\CrearAlarma.cshtml" />
+    <Content Include="Views\Alarma\ListaAlarmaCliente.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
