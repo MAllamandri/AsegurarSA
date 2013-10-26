@@ -18,6 +18,7 @@ namespace AsegurarSA.WebUI.Controllers
     {
         public string Get(int alarmaId)
         {
+            //"543492521512", "@sms.movistar.net.ar"  "543492693251@sms.ctimovil.com.ar"
             var repository = new EFClienteRepository();
             var context = new EFAlarmaRepositry();
             var eventoRepository = new EFEventoRepository();

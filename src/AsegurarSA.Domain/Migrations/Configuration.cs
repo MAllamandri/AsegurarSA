@@ -19,7 +19,7 @@ namespace AsegurarSA.Domain.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(EFDbContext context)
@@ -39,12 +39,18 @@ namespace AsegurarSA.Domain.Migrations
             );
             context.Clientes.AddOrUpdate(
                 c => c.Nombre,
-                    new Cliente { Nombre = "Lucas", Apellido = "Rodriguez", Telefono1 = "554564", Telefono2 = "554564", Domicilio = "JJ 201"},
-                    new Cliente { Nombre = "Diego", Apellido = "Veronesse", Telefono1 = "554564", Telefono2 = "554564", Domicilio = "CC 201"},
-                    new Cliente { Nombre = "Mariano", Apellido = "Ferrero", Telefono1 = "554564", Telefono2 = "554564", Domicilio = "AA 201"},
-                    new Cliente { Nombre = "Pedro", Apellido = "LaPrida", Telefono1 = "554564", Telefono2 = "554564", Domicilio = "DD 201"},
-                    new Cliente { Nombre = "Ignacio", Apellido = "Santos", Telefono1 = "554564", Telefono2 = "554564", Domicilio = "EE 201"}
+                    new Cliente { Nombre = "Lucas", Apellido = "Rodriguez", Telefono1 = "554564", Telefono2 = "554564", Domicilio = "JJ 201", EmpresaId = 1},
+                    new Cliente { Nombre = "Diego", Apellido = "Veronesse", Telefono1 = "554564", Telefono2 = "554564", Domicilio = "CC 201", EmpresaId = 2 },
+                    new Cliente { Nombre = "Mariano", Apellido = "Ferrero", Telefono1 = "554564", Telefono2 = "554564", Domicilio = "AA 201", EmpresaId =3 },
+                    new Cliente { Nombre = "Pedro", Apellido = "LaPrida", Telefono1 = "554564", Telefono2 = "554564", Domicilio = "DD 201", EmpresaId =3 },
+                    new Cliente { Nombre = "Ignacio", Apellido = "Santos", Telefono1 = "554564", Telefono2 = "554564", Domicilio = "EE 201", EmpresaId = 1 }
                 );
+
+            context.Empresas.AddOrUpdate(
+                e => e.EmpresaId,
+                    new Empresa { Descripcion = "Claro"},
+                    new Empresa { Descripcion = "Personal"},
+                    new Empresa { Descripcion = "Movistar"});
 
             WebMatrix.WebData.WebSecurity.InitializeDatabaseConnection("EFDbContext",
    "Empleados", "EmpleadoId", "UserName", autoCreateTables: true);
@@ -53,7 +59,10 @@ namespace AsegurarSA.Domain.Migrations
 
             if (!roles.RoleExists("Admin"))
             {
-                roles.CreateRole("Admin");
+                roles.CreateRole("Root");
+                roles.CreateRole("Administrador");
+                roles.CreateRole("Gerente");
+                roles.CreateRole("Empleado");
             }
             if (membership.GetUser("pibarra", false) == null)
             {
@@ -68,9 +77,9 @@ namespace AsegurarSA.Domain.Migrations
                 membership.CreateUserAndAccount("pibarra", "admin", false, user);
                     // new { Nombre = "Pablo" });//("pibarra", "admin",null,null,null,true,null,out e);
             }
-            if (!roles.GetRolesForUser("pibarra").Contains("Admin"))
+            if (!roles.GetRolesForUser("pibarra").Contains("root"))
             {
-                roles.AddUsersToRoles(new[] { "pibarra" }, new[] { "admin" });
+                roles.AddUsersToRoles(new[] { "pibarra" }, new[] { "root" });
             }
             //if (membership.GetUser("joe", false) == null)
             //{

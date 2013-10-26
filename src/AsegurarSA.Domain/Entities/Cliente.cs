@@ -14,5 +14,8 @@ namespace AsegurarSA.Domain.Entities
         public string Telefono2 { get; set; }
         public string Domicilio { get; set; }
         public Boolean Eliminado { get; set; }
+        public int EmpresaId { get; set; }
+
+        public virtual Empresa Empresa { get; set; }
     }
 }

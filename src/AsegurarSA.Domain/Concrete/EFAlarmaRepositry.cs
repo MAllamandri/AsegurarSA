@@ -18,7 +18,7 @@ namespace AsegurarSA.Domain.Concrete
 
         public Alarma BuscarAlarma(int idAlarma)
         {
-            return context.Alarmas.FirstOrDefault(a => a.AlarmaId == idAlarma);
+            return context.Alarmas.FirstOrDefault(a => a.AlarmaId == idAlarma && a.FechaBaja == null);
         }
 
         public void SaveAlarma(Alarma alarma)
