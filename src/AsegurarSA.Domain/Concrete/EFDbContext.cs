@@ -13,5 +13,7 @@ namespace AsegurarSA.Domain.Concrete
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<TipoServicio> TipoServicios { get; set; }
         public DbSet<Alarma> Alarmas { get; set; }
+        public DbSet<Evento> Eventos { get; set; }
+
     }
 }
