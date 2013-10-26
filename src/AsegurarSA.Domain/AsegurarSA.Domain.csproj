@@ -78,13 +78,9 @@
     <Compile Include="Entities\Empleado.cs" />
     <Compile Include="Entities\Evento.cs" />
     <Compile Include="Entities\TipoServicio.cs" />
-    <Compile Include="Migrations\201310260210144_Primera.cs" />
-    <Compile Include="Migrations\201310260210144_Primera.Designer.cs">
-      <DependentUpon>201310260210144_Primera.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201310250046480_Eventos.cs" />
-    <Compile Include="Migrations\201310250046480_Eventos.Designer.cs">
-      <DependentUpon>201310250046480_Eventos.cs</DependentUpon>
+    <Compile Include="Migrations\201310260312397_Inicial.cs" />
+    <Compile Include="Migrations\201310260312397_Inicial.Designer.cs">
+      <DependentUpon>201310260312397_Inicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,13 +91,10 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
-    <EmbeddedResource Include="Migrations\201310250046480_Eventos.resx">
-      <DependentUpon>201310250046480_Eventos.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201310260210144_Primera.resx">
-      <DependentUpon>201310260210144_Primera.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201310260312397_Inicial.resx">
+      <DependentUpon>201310260312397_Inicial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
