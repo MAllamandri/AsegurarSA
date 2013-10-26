@@ -78,9 +78,9 @@
     <Compile Include="Entities\Empleado.cs" />
     <Compile Include="Entities\Evento.cs" />
     <Compile Include="Entities\TipoServicio.cs" />
-    <Compile Include="Migrations\201310260312397_Inicial.cs" />
-    <Compile Include="Migrations\201310260312397_Inicial.Designer.cs">
-      <DependentUpon>201310260312397_Inicial.cs</DependentUpon>
+    <Compile Include="Migrations\201310260332042_Inicial01.cs" />
+    <Compile Include="Migrations\201310260332042_Inicial01.Designer.cs">
+      <DependentUpon>201310260332042_Inicial01.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,8 +93,8 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201310260312397_Inicial.resx">
-      <DependentUpon>201310260312397_Inicial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201310260332042_Inicial01.resx">
+      <DependentUpon>201310260332042_Inicial01.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
