@@ -76,6 +76,7 @@
     <Compile Include="Entities\Alarma.cs" />
     <Compile Include="Entities\Cliente.cs" />
     <Compile Include="Entities\Empleado.cs" />
+    <Compile Include="Entities\Empresa.cs" />
     <Compile Include="Entities\Evento.cs" />
     <Compile Include="Entities\Empresa.cs" />
     <Compile Include="Entities\TipoServicio.cs" />
