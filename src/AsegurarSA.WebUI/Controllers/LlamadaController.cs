@@ -16,7 +16,7 @@ namespace AsegurarSA.WebUI.Controllers
 {
     public class LlamadaController : ApiController
     {
-        public int Get(int alarmaId)
+        public string Get(int alarmaId)
         {
             var repository = new EFClienteRepository();
             var context = new EFAlarmaRepositry();
@@ -36,9 +36,9 @@ namespace AsegurarSA.WebUI.Controllers
                 mySmtpClient.Credentials = nc;
                 mySmtpClient.EnableSsl = true;
                 mySmtpClient.Send(message);
-                return alarmaId;
+                return "El mensaje ha sido enviando con exito";
             }
-            return 0;
+            return "Mensaje no enviando, consulte su proveedor de servicios";
             //"543492521512", "@sms.movistar.net.ar"
             //@alertas.personal.com.ar    @sms.ctimovil.com.ar
         }
