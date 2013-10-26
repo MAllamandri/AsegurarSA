@@ -3,7 +3,7 @@ namespace AsegurarSA.Domain.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Inicial : DbMigration
+    public partial class Inicial01 : DbMigration
     {
         public override void Up()
         {
@@ -50,7 +50,7 @@ namespace AsegurarSA.Domain.Migrations
                 .PrimaryKey(t => t.EmpleadoId);
             
             CreateTable(
-                "dbo.Eventoes",
+                "dbo.Eventos",
                 c => new
                     {
                         EventoId = c.Int(nullable: false, identity: true),
@@ -79,7 +79,7 @@ namespace AsegurarSA.Domain.Migrations
             DropForeignKey("dbo.Alarmas", "ClienteId", "dbo.Clientes");
             DropIndex("dbo.Alarmas", new[] { "ClienteId" });
             DropTable("dbo.TipoServicios");
-            DropTable("dbo.Eventoes");
+            DropTable("dbo.Eventos");
             DropTable("dbo.Empleados");
             DropTable("dbo.Clientes");
             DropTable("dbo.Alarmas");
