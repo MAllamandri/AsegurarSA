@@ -3,7 +3,7 @@ namespace AsegurarSA.Domain.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InicialFuncionado : DbMigration
+    public partial class Inicial : DbMigration
     {
         public override void Up()
         {
@@ -14,7 +14,7 @@ namespace AsegurarSA.Domain.Migrations
                         AlarmaId = c.Int(nullable: false, identity: true),
                         Direccion = c.String(),
                         ClienteId = c.Int(nullable: false),
-                        FechaBaja = c.DateTime(nullable: true),
+                        FechaBaja = c.DateTime(),
                     })
                 .PrimaryKey(t => t.AlarmaId)
                 .ForeignKey("dbo.Clientes", t => t.ClienteId, cascadeDelete: true)

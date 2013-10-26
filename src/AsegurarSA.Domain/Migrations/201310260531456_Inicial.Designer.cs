@@ -7,13 +7,13 @@ namespace AsegurarSA.Domain.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.0.1-21010")]
-    public sealed partial class InicialFuncionado : IMigrationMetadata
+    public sealed partial class Inicial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InicialFuncionado));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Inicial));
         
         string IMigrationMetadata.Id
         {
-            get { return "201310260454500_InicialFuncionado"; }
+            get { return "201310260531456_Inicial"; }
         }
         
         string IMigrationMetadata.Source
