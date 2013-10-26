@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.Migrations.Model;
 using System.Linq;
@@ -10,6 +11,7 @@ namespace AsegurarSA.Domain.Entities
     [Table("Empresas")]
     public class Empresa
     {
+        [Key]
         public int EmpresaId { get; set; }
         public string Descripcion { get; set; }
     }
