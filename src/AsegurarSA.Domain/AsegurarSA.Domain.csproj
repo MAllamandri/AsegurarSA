@@ -82,6 +82,41 @@
     <Compile Include="Migrations\201310260531456_Inicial.cs" />
     <Compile Include="Migrations\201310260531456_Inicial.Designer.cs">
       <DependentUpon>201310260531456_Inicial.cs</DependentUpon>
+    <Compile Include="Migrations\201310181318216_InitialCreate.cs" />
+    <Compile Include="Migrations\201310181318216_InitialCreate.Designer.cs">
+      <DependentUpon>201310181318216_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201310181319544_initial.cs" />
+    <Compile Include="Migrations\201310181319544_initial.Designer.cs">
+      <DependentUpon>201310181319544_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201310181336489_empleado eliminado.cs" />
+    <Compile Include="Migrations\201310181336489_empleado eliminado.Designer.cs">
+      <DependentUpon>201310181336489_empleado eliminado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201310181419132_Required fields.cs" />
+    <Compile Include="Migrations\201310181419132_Required fields.Designer.cs">
+      <DependentUpon>201310181419132_Required fields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201310182053222_AgregarClientes.cs" />
+    <Compile Include="Migrations\201310182053222_AgregarClientes.Designer.cs">
+      <DependentUpon>201310182053222_AgregarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201310200208007_Login.cs" />
+    <Compile Include="Migrations\201310200208007_Login.Designer.cs">
+      <DependentUpon>201310200208007_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201310200227576_Login1.cs" />
+    <Compile Include="Migrations\201310200227576_Login1.Designer.cs">
+      <DependentUpon>201310200227576_Login1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201310241932011_Tiposervicio.cs" />
+    <Compile Include="Migrations\201310241932011_Tiposervicio.Designer.cs">
+      <DependentUpon>201310241932011_Tiposervicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201310241929382_alarma.cs" />
+    <Compile Include="Migrations\201310241929382_alarma.Designer.cs">
+      <DependentUpon>201310241929382_alarma.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,6 +127,32 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+    <EmbeddedResource Include="Migrations\201310181318216_InitialCreate.resx">
+      <DependentUpon>201310181318216_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310181319544_initial.resx">
+      <DependentUpon>201310181319544_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310181336489_empleado eliminado.resx">
+      <DependentUpon>201310181336489_empleado eliminado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310181419132_Required fields.resx">
+      <DependentUpon>201310181419132_Required fields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310182053222_AgregarClientes.resx">
+      <DependentUpon>201310182053222_AgregarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310200208007_Login.resx">
+      <DependentUpon>201310200208007_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310200227576_Login1.resx">
+      <DependentUpon>201310200227576_Login1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310241932011_Tiposervicio.resx"/>
+      <DependentUpon>201310241932011_Tiposervicio.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201310241929382_alarma.resx">
+      <DependentUpon>201310241929382_alarma.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201310260531456_Inicial.resx">
