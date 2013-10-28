@@ -155,6 +155,7 @@
     <Compile Include="Controllers\EmpleadosController.cs" />
     <Compile Include="Controllers\LlamadaController.cs" />
     <Compile Include="Controllers\TipoServicioController.cs" />
+    <Compile Include="Controllers\TurnoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -308,6 +309,7 @@
     <Content Include="Content\themes\AsegurarSA\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\themes\AsegurarSA\fonts\glyphiconshalflings-regular.svg" />
     <Content Include="Content\themes\AsegurarSA\img\alpha.png" />
+    <Content Include="Content\themes\AsegurarSA\img\asegurar.png" />
     <Content Include="Content\themes\AsegurarSA\img\breadcrumb.png" />
     <Content Include="Content\themes\AsegurarSA\img\demo\av1.jpg" />
     <Content Include="Content\themes\AsegurarSA\img\demo\av2.jpg" />
@@ -541,6 +543,10 @@
     <Content Include="Views\Alarma\CrearAlarma.cshtml" />
     <Content Include="Views\Alarma\ListaAlarmaCliente.cshtml" />
     <Content Include="Views\Empleados\CrearEmpleado.cshtml" />
+    <Content Include="Views\Turnos\Index.cshtml" />
+    <Content Include="Views\Turnos\UltimoMes.cshtml" />
+    <Content Include="Views\Cliente\Create.cshtml" />
+    <Content Include="Views\Cliente\SelectEmpresa.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

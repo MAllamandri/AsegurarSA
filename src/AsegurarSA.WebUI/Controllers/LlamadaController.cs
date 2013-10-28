@@ -18,7 +18,6 @@ namespace AsegurarSA.WebUI.Controllers
     {
         public string Get(int alarmaId)
         {
-            //"543492521512", "@sms.movistar.net.ar"  "543492693251@sms.ctimovil.com.ar"
             var repository = new EFClienteRepository();
             var context = new EFAlarmaRepositry();
             var eventoRepository = new EFEventoRepository();
@@ -29,9 +28,22 @@ namespace AsegurarSA.WebUI.Controllers
                 Evento evento = new Evento();
                 evento.ClienteId = cliente.ClienteId;
                 evento.Fecha = DateTime.Now;
-                evento.Descripcion = "Alarma sonando";
+                evento.Descripcion = "Su alarma de la direccion: " + alarma.Direccion + " esta sonando, por favor verifique";
+                string carrier = "";
+                switch (cliente.EmpresaId)
+                {
+                    case 1:
+                        carrier = "@sms.ctimovil.com.ar";
+                        break;
+                    case 2:
+                        carrier = "@alertas.personal.com.ar";
+                        break;
+                    case 3:
+                        carrier = "@sms.movistar.net.ar";
+                        break;
+                }
                 eventoRepository.SaveEvento(evento);
-                MailMessage message = new MailMessage("asegurarsa.metodos@gmail.com", "543492521512@sms.movistar.net.ar", "Alarma activada", "Su alarma esta sonando");
+                MailMessage message = new MailMessage("asegurarsa.metodos@gmail.com", cliente.Telefono1+carrier, "Alarma activada", evento.Descripcion);
                 SmtpClient mySmtpClient = new SmtpClient("smtp.gmail.com");
                 NetworkCredential nc = new NetworkCredential("asegurarsa.metodos@gmail.com", "metodosagiles");
                 mySmtpClient.Credentials = nc;
@@ -40,8 +52,6 @@ namespace AsegurarSA.WebUI.Controllers
                 return "El mensaje ha sido enviando con exito";
             }
             return "Mensaje no enviando, consulte su proveedor de servicios";
-            //"543492521512", "@sms.movistar.net.ar"
-            //@alertas.personal.com.ar    @sms.ctimovil.com.ar
         }
     }
 }

@@ -65,9 +65,9 @@
                                 <td>@c.Domicilio</td>
                                 <td>@c.Telefono1</td>
                                 <td>@c.Telefono2</td>
-                                <td><a href="#"><i class="glyphicon glyphicon-edit"></i></a></td>
+                                <td><a href="@Url.Action("Modificar", "Cliente", new { clienteId = @c.ClienteId })"><i class="glyphicon glyphicon-edit"></i></a></td>
                                 <td><a href="@Url.Action("ListaAlarmaCliente", "Alarma", new { clienteId = @c.ClienteId })"><i class="glyphicon glyphicon-bell" /></a></td>
-
+                                <td><a href="@Url.Action("Delete", "Cliente", new { clienteId = @c.ClienteId })"><i class="glyphicon glyphicon-remove" /></a></td>
                             </tr>
                         }
 
@@ -82,7 +82,7 @@
 <div class="row">
     <div class="col-xs-12">
         <div class="">
-            <a href="/Empleados/Create"><i class="" /><i class="glyphicon glyphicon-plus"></i>Agregar nuevo cliente</a>
+            <a href="/Cliente/Create"><i class="" /><i class="glyphicon glyphicon-plus"></i>Agregar nuevo cliente</a>
         </div>
     </div>
 </div>

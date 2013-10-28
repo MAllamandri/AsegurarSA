@@ -12,8 +12,11 @@ namespace AsegurarSA.Domain.Entities
     {
         [Key]
         public  int TipoServicioId { get; set; }
+        [Required]
         public string Nombre { get; set; }
+        [Required]
         public string Descripcion { get; set; }
+        [Required]
         public decimal Costo { get; set; }
         public Boolean Eliminado { get; set; }
     }

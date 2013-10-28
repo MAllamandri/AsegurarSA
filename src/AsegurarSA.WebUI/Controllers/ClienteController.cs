@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mime;
 using System.Web;
 using System.Web.Mvc;
 using AsegurarSA.Domain.Abstract;
@@ -25,5 +26,34 @@ namespace AsegurarSA.WebUI.Controllers
             return View(_repository.Cliente);
         }
 
+        public ActionResult Create(Cliente cliente = null)
+        {
+           return View(cliente);
+        }
+
+        [HttpPost]
+        public ActionResult Editar(Cliente cliente)
+        {
+            if (ModelState.IsValid)
+            {
+                _repository.SaveCliente(cliente);
+                return RedirectToAction("List");
+            }
+            return RedirectToAction("Create", cliente);
+        }
+
+
+        public ActionResult Delete(int clienteId=0)
+        {
+            var cliente = _repository.Cliente.FirstOrDefault(e => e.ClienteId == clienteId);
+            _repository.DeleteCliente(cliente);
+            return RedirectToAction("List");
+        }
+
+        public ActionResult Modificar(int clienteId = 0)
+        {
+            var cliente = _repository.Cliente.FirstOrDefault(e => e.ClienteId == clienteId);
+            return RedirectToAction("Create", cliente);
+        }
     }
 }
