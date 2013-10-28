@@ -308,6 +308,7 @@
     <Content Include="Content\themes\AsegurarSA\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\themes\AsegurarSA\fonts\glyphiconshalflings-regular.svg" />
     <Content Include="Content\themes\AsegurarSA\img\alpha.png" />
+    <Content Include="Content\themes\AsegurarSA\img\logo.png" />
     <Content Include="Content\themes\AsegurarSA\img\breadcrumb.png" />
     <Content Include="Content\themes\AsegurarSA\img\demo\av1.jpg" />
     <Content Include="Content\themes\AsegurarSA\img\demo\av2.jpg" />
@@ -378,7 +379,7 @@
     <Content Include="Content\themes\AsegurarSA\img\jquery-ui\ui-icons_f6cf3b_256x240.png" />
     <Content Include="Content\themes\AsegurarSA\img\larrow.png" />
     <Content Include="Content\themes\AsegurarSA\img\line.png" />
-    <Content Include="Content\themes\AsegurarSA\img\logo.png" />
+    <Content Include="Content\themes\AsegurarSA\img\logo2.png" />
     <Content Include="Content\themes\AsegurarSA\img\menu-active.png" />
     <Content Include="Content\themes\AsegurarSA\img\rarrow.png" />
     <Content Include="Content\themes\AsegurarSA\img\saturation.png" />
