@@ -14,6 +14,7 @@ namespace AsegurarSA.Domain.Entities
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int EmpleadoId { get; set; }
         public string UserName { get; set; }
+        public string Password { get; set; }
         [Required]
         public string Nombre { get; set; }
         [Required]
@@ -21,7 +22,7 @@ namespace AsegurarSA.Domain.Entities
         [Required]
         public string Telefono { get; set; }
 
-        public string Password { get; set; }
+
 
         [Required]
         [Display(Name="Fecha Nacimiento")]

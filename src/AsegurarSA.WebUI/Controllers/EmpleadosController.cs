@@ -54,9 +54,15 @@ namespace AsegurarSA.WebUI.Controllers
         }
 
         [HttpPost]
-        public ActionResult CrearEmpleado(Empleado empleado)
+        public ActionResult CrearEmpleado(Empleado empleado, int rol=3)
         {
-            return View();
+            var srol = rol == 3 ? "Empleado" : rol == 2 ? "Gerente" : rol == 1 ? "Administrador" : "Root";
+             if (_repository.CrearEmpleado(empleado,srol))
+            {
+              //  _repository.CrearEmpleado(empleado);
+                return RedirectToAction("List");
+           }
+            return View(empleado);
         }
         public ActionResult Delete(int EmpleadoId = 0)
         {
