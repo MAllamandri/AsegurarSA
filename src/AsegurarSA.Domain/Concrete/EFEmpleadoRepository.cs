@@ -25,11 +25,11 @@ namespace AsegurarSA.Domain.Concrete
             context.SaveChanges();
         }
 
-        public Boolean CrearEmpleado(Empleado empleado)
+        public Boolean CrearEmpleado(Empleado empleado, string rol)
         {
             try
             {
-                WebMatrix.WebData.WebSecurity.InitializeDatabaseConnection("EFDbContext", "Empleados", "EmpleadoId", "UserName", autoCreateTables: true);
+               // WebMatrix.WebData.WebSecurity.InitializeDatabaseConnection("EFDbContext", "Empleados", "EmpleadoId", "UserName", autoCreateTables: true);
                 var roles = (SimpleRoleProvider)Roles.Provider;
                 var membership = (SimpleMembershipProvider)Membership.Provider;
                 if (membership.GetUser(empleado.UserName, false) == null)
@@ -40,13 +40,14 @@ namespace AsegurarSA.Domain.Concrete
                     user.Add("Apellido", empleado.Apellido);
                     user.Add("FechaNacimiento", empleado.FechaNacimiento);
                     user.Add("Telefono", empleado.Telefono);
+                    user.Add("Eliminado", "False");
 
                     var e = new MembershipCreateStatus();
                     membership.CreateUserAndAccount(empleado.UserName, empleado.Password, false, user);
 
-                    if (!roles.GetRolesForUser(empleado.UserName).Contains("empleado"))
+                    if (!roles.GetRolesForUser(empleado.UserName).Contains(rol))
                     {
-                        roles.AddUsersToRoles(new[] { empleado.UserName }, new[] { "Empleado" });
+                        roles.AddUsersToRoles(new[] { empleado.UserName }, new[] {rol});
                     }
 
                     return true;

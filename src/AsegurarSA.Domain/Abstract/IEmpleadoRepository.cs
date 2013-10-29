@@ -9,6 +9,7 @@ namespace AsegurarSA.Domain.Abstract
     public interface IEmpleadoRepository
     {
         IQueryable<Empleado> Empleados { get; }
+        Boolean CrearEmpleado(Empleado empleado,string rol);
         void SaveEmpleado(Empleado empleado);
         void DeleteEmpleado(Empleado empleado);
     }
