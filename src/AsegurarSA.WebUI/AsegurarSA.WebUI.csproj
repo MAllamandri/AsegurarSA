@@ -380,7 +380,8 @@
     <Content Include="Content\themes\AsegurarSA\img\jquery-ui\ui-icons_f6cf3b_256x240.png" />
     <Content Include="Content\themes\AsegurarSA\img\larrow.png" />
     <Content Include="Content\themes\AsegurarSA\img\line.png" />
-    <Content Include="Content\themes\AsegurarSA\img\logo2.png" />
+    <Content Include="Content\themes\AsegurarSA\img\log2o.png" />
+    <Content Include="Content\themes\AsegurarSA\img\logo.png" />
     <Content Include="Content\themes\AsegurarSA\img\menu-active.png" />
     <Content Include="Content\themes\AsegurarSA\img\rarrow.png" />
     <Content Include="Content\themes\AsegurarSA\img\saturation.png" />
@@ -542,10 +543,10 @@
     <Content Include="Views\Alarma\CrearAlarma.cshtml" />
     <Content Include="Views\Alarma\ListaAlarmaCliente.cshtml" />
     <Content Include="Views\Empleados\CrearEmpleado.cshtml" />
-    <Content Include="Views\Turnos\Index.cshtml" />
-    <Content Include="Views\Turnos\UltimoMes.cshtml" />
+    <Content Include="Views\Turno\Index.cshtml" />
     <Content Include="Views\Cliente\Create.cshtml" />
-    <Content Include="Views\Cliente\SelectEmpresa.cshtml" />
+    <Content Include="Views\Turno\ObtenerTurnos.cshtml" />
+    <Content Include="Views\Turno\ObtenerInformeTurnos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

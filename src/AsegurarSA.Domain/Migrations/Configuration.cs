@@ -42,7 +42,11 @@ namespace AsegurarSA.Domain.Migrations
                 new Empleado { UserName = "mallamandri", Nombre = "Maximiliano", Apellido = "Allamandri", FechaNacimiento = DateTime.Now, Telefono = "554564",Eliminado = false},
                 new Empleado { UserName = "mfrund", Nombre = "Marcos", Apellido = "Frund", FechaNacimiento = DateTime.Now, Telefono = "554564", Eliminado = false },
                 new Empleado { UserName = "ekuschnir", Nombre = "Ezequiel", Apellido = "Kuschnir", FechaNacimiento = DateTime.Now, Telefono = "554564", Eliminado = false },
-                new Empleado { UserName = "everonesse", Nombre = "Estefano", Apellido = "Veronesse", FechaNacimiento = DateTime.Now, Telefono = "554564", Eliminado = false }
+                new Empleado { UserName = "everonesse", Nombre = "Estefano", Apellido = "Veronesse", FechaNacimiento = DateTime.Now, Telefono = "554564", Eliminado = false },
+                new Empleado { UserName = "mallamandri", Nombre = "Jose", Apellido = "Allamandri", FechaNacimiento = DateTime.Now, Telefono = "554564",Eliminado = false},
+                new Empleado { UserName = "mfrund", Nombre = "Manuel", Apellido = "Frund", FechaNacimiento = DateTime.Now, Telefono = "554564", Eliminado = false },
+                new Empleado { UserName = "ekuschnir", Nombre = "Lucho", Apellido = "Kuschnir", FechaNacimiento = DateTime.Now, Telefono = "554564", Eliminado = false },
+                new Empleado { UserName = "everonesse", Nombre = "Javier", Apellido = "Veronesse", FechaNacimiento = DateTime.Now, Telefono = "554564", Eliminado = false }
             );
 
             context.Clientes.AddOrUpdate(
@@ -52,6 +56,18 @@ namespace AsegurarSA.Domain.Migrations
                     new Cliente { Nombre = "Mariano", Apellido = "Ferrero", Telefono1 = "554564", Telefono2 = "554564", Domicilio = "AA 201", Eliminado = false, EmpresaId = 2 },
                     new Cliente { Nombre = "Pedro", Apellido = "LaPrida", Telefono1 = "554564", Telefono2 = "554564", Domicilio = "DD 201", Eliminado = false, EmpresaId = 1 },
                     new Cliente { Nombre = "Ignacio", Apellido = "Santos", Telefono1 = "554564", Telefono2 = "554564", Domicilio = "EE 201", Eliminado = false, EmpresaId = 2 }
+                );
+            context.Turnos.AddOrUpdate(
+                t => t.TurnoId,
+                    new Turno {  FechaDia =  Convert.ToDateTime("25/10/2013"), EmpleadoId = 1, Dia = 1, Semana = 5, TipoTurno = 1, Franco =true },
+                    new Turno {  FechaDia = Convert.ToDateTime("25/10/2013"), EmpleadoId = 2, Dia = 6, Semana = 4, TipoTurno = 1, Franco = false },
+                    new Turno {  FechaDia = Convert.ToDateTime("25/10/2013"), EmpleadoId = 3, Dia = 4, Semana = 4, TipoTurno = 1, Franco = false },
+                    new Turno {  FechaDia = Convert.ToDateTime("25/10/2013") , EmpleadoId = 4, Dia = 1, Semana = 5, TipoTurno = 2, Franco = true},
+                    new Turno {  FechaDia = Convert.ToDateTime("25/10/2013"), EmpleadoId = 5, Dia = 6, Semana = 4, TipoTurno = 2, Franco = false },
+                    new Turno {  FechaDia = Convert.ToDateTime("25/10/2013"), EmpleadoId = 6, Dia = 4, Semana = 4, TipoTurno = 2, Franco = false },
+                    new Turno {  FechaDia = Convert.ToDateTime("25/10/2013"), EmpleadoId = 7, Dia = 1, Semana = 5, TipoTurno = 3, Franco = true },
+                    new Turno {  FechaDia = Convert.ToDateTime("25/10/2013"), EmpleadoId = 8, Dia = 6, Semana = 4, TipoTurno = 3, Franco = false },
+                    new Turno {  FechaDia = Convert.ToDateTime("25/10/2013"), EmpleadoId = 9, Dia = 4, Semana = 4, TipoTurno = 3, Franco = false }
                 );
 
 

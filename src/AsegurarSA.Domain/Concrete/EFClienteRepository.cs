@@ -34,6 +34,12 @@ namespace AsegurarSA.Domain.Concrete
         {
             if (cliente != null)
             {
+                EFAlarmaRepositry alarma = new EFAlarmaRepositry();
+                IQueryable<Alarma> listaAlarmasCliente = alarma.ListaAlarmaCliente(cliente.ClienteId);
+                foreach (var alarma1 in listaAlarmasCliente)
+                {
+                    alarma.DeleteAlarma(alarma1);
+                }
                 cliente.Eliminado = true;
                 context.Entry(cliente).State = System.Data.Entity.EntityState.Modified;
             }

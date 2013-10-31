@@ -32,8 +32,10 @@ namespace AsegurarSA.WebUI.Controllers
         }
 
         [HttpPost]
-        public ActionResult Editar(Cliente cliente)
+        public ActionResult Editar(Cliente cliente, int empresa = 3)
         {
+           // var e = empresa == 3 ? "Movistar" : empresa == 2 ? "Personal" : empresa == 1 ? "Claro" : "Movistar";
+            cliente.EmpresaId = empresa;
             if (ModelState.IsValid)
             {
                 _repository.SaveCliente(cliente);

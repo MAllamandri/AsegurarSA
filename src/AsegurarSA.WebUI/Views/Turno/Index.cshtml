@@ -1,0 +1,38 @@
+﻿@model AsegurarSA.Domain.Entities.Turno
+
+@{
+    ViewBag.Title = "Generar turnos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Generar Turnos</h2>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="widget-box">
+            <div class="widget-content nopadding">
+             @using (Html.BeginForm("OriginarTurnos", "Turno", FormMethod.Post, new {@class = "form-horizontal"}))
+             {
+                 <div class="form-group">
+                     @Html.Label("Fecha Tope", new {@class = "control-label"})
+                     @Html.Label("ViewBag.UltimoTurno", new {@class = "control-label"})
+                     <div class="controls">
+                         <input id="FechaTope" name="FechaTope" type="text" value='' class=" datepicker form-control input-sm" data-date-format="dd-mm-yyyy" data-date='' />                            
+                     </div>
+                 </div>
+                  <div class="form-actions">
+                        <button class="btn btn-primary btn-sm" type="submit">Generar</button>
+                        <a href="/" class="text-danger">Cancelar</a>
+                  </div>
+             }
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        $('#sidebar .active').removeClass('active');
+        $('#sidebar #empleado').addClass('active open');
+        $('.datepicker').datepicker();
+    });
+</script>

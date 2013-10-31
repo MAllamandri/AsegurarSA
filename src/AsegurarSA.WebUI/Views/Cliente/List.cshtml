@@ -3,34 +3,6 @@
 @{
     ViewBag.Title = "Lista de clientes";
 }
-@*<table class="table table-striped">
-    <thead>
-        <tr>
-        <th>Apellido</th>
-        <th>Nombre</th>
-        <th>Domicilio</th>
-        <th>Telefono principal</th>
-            <th>Telefono contacto</th>
-            <th/>
-            <th/>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach(var c in Model){
-        <tr>
-            <td>@c.Apellido</td>
-            <td>@c.Nombre</td>
-            <td>@c.Domicilio</td>
-            <td>@c.Telefono1</td>
-            <td>@c.Telefono2</td>
-            <td><a href="#"><i class="glyphicon glyphicon-edit"></i></a></td>
-            <td><a href="@Url.Action("CrearAlarma", "Alarma", new { clienteId = @c.ClienteId })"><i class="glyphicon glyphicon-bell" /></a></td>
-        </tr>
-        }
-    </tbody>
-</table>*@
-
-
 
 <div class="row">
     <div class="col-xs-12">
@@ -50,9 +22,10 @@
                             <th>Nombre</th>
                             <th>Domicilio</th>
                             <th>Telefono principal</th>
-                            <th>Telefono contacto</th>
+                            <th>Telefono auxiliar</th>
 
                             <th style="width: 6px;"></th>
+                            <th></th>
                             <th></th>
                         </tr>
                     </thead>
