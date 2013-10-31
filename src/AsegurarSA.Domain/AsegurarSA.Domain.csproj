@@ -114,6 +114,10 @@
     <Compile Include="Migrations\201310310055041_turnosempleado.Designer.cs">
       <DependentUpon>201310310055041_turnosempleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201310312000042_AlarmaCoordenadas.cs" />
+    <Compile Include="Migrations\201310312000042_AlarmaCoordenadas.Designer.cs">
+      <DependentUpon>201310312000042_AlarmaCoordenadas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -148,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201310310055041_turnosempleado.resx">
       <DependentUpon>201310310055041_turnosempleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310312000042_AlarmaCoordenadas.resx">
+      <DependentUpon>201310312000042_AlarmaCoordenadas.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

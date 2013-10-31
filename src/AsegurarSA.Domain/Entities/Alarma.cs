@@ -16,6 +16,8 @@ namespace AsegurarSA.Domain.Entities
         public int ClienteId { get; set; }
         public virtual Cliente Cliente { get; set; }
         public DateTime? FechaBaja { get; set; }
+        public string Latitud { get; set; }
+        public string Longitud { get; set; }
     }
 
 }
