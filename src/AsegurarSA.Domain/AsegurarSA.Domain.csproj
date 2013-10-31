@@ -110,6 +110,10 @@
     <Compile Include="Migrations\201310292140310_key1.Designer.cs">
       <DependentUpon>201310292140310_key1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201310310055041_turnosempleado.cs" />
+    <Compile Include="Migrations\201310310055041_turnosempleado.Designer.cs">
+      <DependentUpon>201310310055041_turnosempleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -141,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201310292140310_key1.resx">
       <DependentUpon>201310292140310_key1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310310055041_turnosempleado.resx">
+      <DependentUpon>201310310055041_turnosempleado.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -57,8 +57,6 @@ $(document).ready(function(){
                 data: 'UserName=' + userinput.val() + '&Password=' + passinput.val(),
                 dataType: "json",
                 success: function (data) {
-                    debugger;
-                    console.log(data);
                     if (data.result == true) {
                         loginbox.animate({ 'top': '+=100px', 'opacity': '0' }, 250, function() {
                             $('.user_name').text(userinput.val());

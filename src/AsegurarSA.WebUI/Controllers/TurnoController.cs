@@ -15,27 +15,22 @@ namespace AsegurarSA.WebUI.Controllers
         //
         // GET: /Turno/
          private ITurnoRepository _repository;
-         private IClienteRepository _clienterepository;
 
-         public TurnoController(ITurnoRepository repository, IClienteRepository clienteRepository)
+         public TurnoController(ITurnoRepository repository)
         {
             this._repository = repository;
-            this._clienterepository = clienteRepository;
         }
         
         public ActionResult Index()
         {
-            EFTurnoRepository context = new EFTurnoRepository();
-            IEnumerable<Turno> lista = context.ObtenerListaTurnos();
+            IEnumerable<Turno> lista = _repository.ObtenerListaTurnos();
             ViewBag.UltimoTurno = lista.ElementAt(0).FechaDia;
             return View();
         }
 
         public ActionResult OriginarTurnos(DateTime  FechaTope)
         {
-            EFTurnoRepository context = new EFTurnoRepository();
-            List<Turno> lista = context.ManejadorTurnos(FechaTope);
-          
+            List<Turno> lista = _repository.ManejadorTurnos(FechaTope);
             return RedirectToAction("Index");
         }
 

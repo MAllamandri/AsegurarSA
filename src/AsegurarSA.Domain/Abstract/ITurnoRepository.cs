@@ -12,5 +12,6 @@ namespace AsegurarSA.Domain.Abstract
         void SaveTurno(Turno turno);
         IEnumerable<Turno> ObtenerListaTurnos();
         IEnumerable<Turno> ObtenerTurnos(DateTime fechaInicio, DateTime fechaTope);
+        List<Turno> ManejadorTurnos(DateTime FechaDia);
     }
 }

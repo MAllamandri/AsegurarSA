@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
+using System.Web.UI.WebControls.WebParts;
 using AsegurarSA.Domain.Abstract;
 using AsegurarSA.Domain.Entities;
 
@@ -33,11 +35,10 @@ namespace AsegurarSA.Domain.Concrete
             return Turnos;
         }
         // Lista de turnos es una lista que tiene los turnos del ultimo dia de trabajo
-        public static  List<Turno> GenerarTurnos(IEnumerable<Turno> listaTurnos, DateTime fechaTope)
+        public List<Turno> GenerarTurnos(IEnumerable<Turno> listaTurnos, DateTime fechaTope)
         {
-            EFTurnoRepository contexto = new EFTurnoRepository();
-            DateTime fechaInicio = listaTurnos.First().FechaDia;
-            List<Turno> listaFinalturnos = new List<Turno>();
+            var fechaInicio = listaTurnos.First().FechaDia;
+            var listaFinalturnos = new List<Turno>();
             if (fechaInicio > fechaTope)
             {
                 throw new ArgumentNullException("fechaTope","Ingrese una fecha superior al ultimo turno");
@@ -79,7 +80,8 @@ namespace AsegurarSA.Domain.Concrete
                     }
                     e.FechaDia = fechaInicio;
                     listaFinalturnos.Add(e);
-                    contexto.SaveTurno(e);
+                    context.Turnos.Add(e);
+                    context.SaveChanges();
                 }
             }
             return listaFinalturnos;
@@ -88,17 +90,12 @@ namespace AsegurarSA.Domain.Concrete
         public IEnumerable<Turno> ObtenerListaTurnos()
         {
             var ultimoturno = context.Turnos.AsEnumerable().Last();
-            var cantidad = context.Turnos.Count();
-            IEnumerable<Turno> listaTurnos = context.Turnos.Where(t => t.FechaDia == ultimoturno.FechaDia);
-
-            return listaTurnos;
+            return context.Turnos.Where(t => t.FechaDia ==  ultimoturno.FechaDia);
         }
 
         public IEnumerable<Turno> ObtenerTurnos(DateTime fechaInico, DateTime fechaTope)
         {
-            var ListaTurnos = context.Turnos.Where(t=> t.FechaDia >= fechaInico && t.FechaDia <= fechaTope);
-
-            return ListaTurnos;
+            return context.Turnos.Where(t=> t.FechaDia >= fechaInico && t.FechaDia <= fechaTope);;
         }
     }
 }

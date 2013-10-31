@@ -20,6 +20,6 @@ namespace AsegurarSA.Domain.Entities
         public int Semana { get; set; }
         public int TipoTurno { get; set; }
         public Boolean Franco { get; set; }
-       // public virtual Empleado Empleado { get; set; }
+        public virtual Empleado Empleado { get; set; }
     }
 }
