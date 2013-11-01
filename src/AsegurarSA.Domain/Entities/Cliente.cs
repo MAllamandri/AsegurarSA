@@ -19,7 +19,7 @@ namespace AsegurarSA.Domain.Entities
         [Display(Name = "Telefono principal")]
         public string Telefono1 { get; set; }
         [Required]
-   //     [RegularExpression("(([0-9]{12}))|(([0-9]{13}))")]
+        //[RegularExpression("(([0-9]{12}))|(([0-9]{13}))")]
         [Display(Name = "Telefono Celular")]
         public string Telefono2 { get; set; }
         [Required]
@@ -27,5 +27,8 @@ namespace AsegurarSA.Domain.Entities
         public Boolean Eliminado { get; set; }
         [Required]
         public int EmpresaId { get; set; }
+        [Required]
+        [Display(Name = "Tipo de Servicio")]
+        public int TipoServicioId { get; set; }  
     }
 }

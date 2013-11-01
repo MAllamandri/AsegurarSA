@@ -4,11 +4,6 @@
     ViewBag.Title = "Create";
 }
 <head>
-    <script>
-        $('#SelectEmpresa').change(function() {
-           $(document).getElementById("empresaId").value = $(this).val();
-        });
-    </script>
 </head>
 <h2>Clientes</h2>
 <div class="row">
@@ -49,13 +44,18 @@
                         <div class="controls">
                         @Html.DropDownList("empresa",new SelectList(
                               new List<Object>{ 
-                                   new { value = 0 , text = ""  },
                                    new { value = 1 , text = "Claro" },
                                    new { value = 2 , text = "Personal"},
                                    new { value = 3 , text = "Movistar"}
-                                },"value","text",0),new {@class="form-control dropdown"})
+                                },"value","text",@Model.EmpresaId),new {@class="form-control dropdown"})
                         </div>
-                    </div>          
+                    </div>  
+                     <div class="form-group">
+                        @Html.LabelFor(model => model.TipoServicioId, new { @class = "control-label" })
+                        <div class="controls">
+                           @Html.DropDownList("servicio",ViewData["listaServicios"] as SelectList, new { @class = "form-control input-sm" })
+                        </div>
+                    </div>        
                   
                     <div class="form-group">
                         @Html.LabelFor(model => model.Telefono1, new { @class = "control-label" })
@@ -86,4 +86,4 @@
         
         $('.datepicker').datepicker();
     });
-</>
+</script>

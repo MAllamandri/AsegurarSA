@@ -37,8 +37,8 @@ namespace AsegurarSA.WebUI.Controllers
             var lista = _repository2.ObtenerEmpleadosPorRol("Empleado Tecnico");
             IEnumerable<Empleado> listaEmpleados = _repository2.ObtenerEmpleadoPorUsername(lista);
             IEnumerable<Cliente> clientes = _repository3.Cliente;
-            var list = new SelectList(listaEmpleados, "EmpleadoId", "Nombre", "Nombre");
-            var listClientes = new SelectList(clientes, "ClienteId", "Nombre", "Nombre");
+            var list = new SelectList(listaEmpleados, "EmpleadoId", "Nombre", Tarea.EmpleadoId);
+            var listClientes = new SelectList(clientes, "ClienteId", "Nombre", Tarea.ClienteId);
             ViewData["listaEmpleados"] = list;
             ViewData["listaClientes"] = listClientes;
             

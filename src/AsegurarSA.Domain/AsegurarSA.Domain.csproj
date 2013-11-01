@@ -63,11 +63,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IClienteRepository.cs" />
+    <Compile Include="Abstract\IClienteServicioRepository.cs" />
     <Compile Include="Abstract\IEmpleadoRepository.cs" />
     <Compile Include="Abstract\IEventoRepository.cs" />
     <Compile Include="Abstract\ITareaRepository.cs" />
     <Compile Include="Abstract\ITipoServicio.cs" />
     <Compile Include="Abstract\ITurnoRepository.cs" />
+    <Compile Include="Concrete\EFClienteServicioRepository.cs" />
     <Compile Include="Concrete\EFEventoRepository.cs" />
     <Compile Include="Abstract\IAlarmaRepository.cs" />
     <Compile Include="Concrete\EFAlarmaRepositry.cs" />
@@ -79,15 +81,40 @@
     <Compile Include="Concrete\EFTurnoRepository.cs" />
     <Compile Include="Entities\Alarma.cs" />
     <Compile Include="Entities\Cliente.cs" />
+    <Compile Include="Entities\ClienteServicio.cs" />
     <Compile Include="Entities\Empleado.cs" />
     <Compile Include="Entities\Evento.cs" />
     <Compile Include="Entities\Empresa.cs" />
     <Compile Include="Entities\Tarea.cs" />
     <Compile Include="Entities\TipoServicio.cs" />
     <Compile Include="Entities\Turno.cs" />
-    <Compile Include="Migrations\201311011636080_Inicial.cs" />
-    <Compile Include="Migrations\201311011636080_Inicial.Designer.cs">
-      <DependentUpon>201311011636080_Inicial.cs</DependentUpon>
+    <Compile Include="Migrations\201311011850530_inicial.cs" />
+    <Compile Include="Migrations\201311011850530_inicial.Designer.cs">
+      <DependentUpon>201311011850530_inicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201311011909108_inicial1.cs" />
+    <Compile Include="Migrations\201311011909108_inicial1.Designer.cs">
+      <DependentUpon>201311011909108_inicial1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201311011954390_inicial2.cs" />
+    <Compile Include="Migrations\201311011954390_inicial2.Designer.cs">
+      <DependentUpon>201311011954390_inicial2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201311012005491_inicial3.cs" />
+    <Compile Include="Migrations\201311012005491_inicial3.Designer.cs">
+      <DependentUpon>201311012005491_inicial3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201311012055403_inicial4.cs" />
+    <Compile Include="Migrations\201311012055403_inicial4.Designer.cs">
+      <DependentUpon>201311012055403_inicial4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201311012058132_inicial5.cs" />
+    <Compile Include="Migrations\201311012058132_inicial5.Designer.cs">
+      <DependentUpon>201311012058132_inicial5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201311012110276_inicial6.cs" />
+    <Compile Include="Migrations\201311012110276_inicial6.Designer.cs">
+      <DependentUpon>201311012110276_inicial6.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -100,8 +127,26 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201311011636080_Inicial.resx">
-      <DependentUpon>201311011636080_Inicial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201311011850530_inicial.resx">
+      <DependentUpon>201311011850530_inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311011909108_inicial1.resx">
+      <DependentUpon>201311011909108_inicial1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311011954390_inicial2.resx">
+      <DependentUpon>201311011954390_inicial2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311012005491_inicial3.resx">
+      <DependentUpon>201311012005491_inicial3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311012055403_inicial4.resx">
+      <DependentUpon>201311012055403_inicial4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311012058132_inicial5.resx">
+      <DependentUpon>201311012058132_inicial5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311012110276_inicial6.resx">
+      <DependentUpon>201311012110276_inicial6.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,0 +1,53 @@
+﻿@model AsegurarSA.Domain.Entities.TipoServicio
+
+@{
+    ViewBag.Title = "Obtener Clientes por Servicio";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="widget-box">
+            <div class="widget-content nopadding">
+             @using (Html.BeginForm("InformeClientesServicios", "Reportes", FormMethod.Post, new {@class = "form-horizontal"}))
+             {
+                 <div class="form-group">
+                     @Html.Label("Fecha Inicio", new {@class = "control-label"})
+                     <div class="controls">
+                         <input id="FechaInicio" name="FechaInicio" type="text" value='' class=" datepicker form-control input-sm" data-date-format="dd-mm-yyyy" data-date='' />                            
+                     </div>
+                 </div>
+
+                 <div class="form-group">
+                     @Html.Label("Fecha Fin", new {@class = "control-label"})
+                     <div class="controls">
+                         <input id="FechaFin" name="FechaFin" type="text" value='' class=" datepicker form-control input-sm" data-date-format="dd-mm-yyyy" data-date='' />                            
+                     </div>
+                 </div>
+                 
+                  <div class="form-group">
+                        @Html.LabelFor(model => model.TipoServicioId, new { @class = "control-label" })
+                        <div class="controls">
+                           @Html.DropDownList("servicio",ViewData["listaServicios"] as SelectList, new { @class = "form-control input-sm" })
+                        </div>
+                    </div>     
+                 
+                 <div class="form-actions">
+                     <button class="btn btn-primary btn-sm" type="submit">Generar</button>
+                     <a href="/" class="text-danger">Cancelar</a>
+                 </div>
+                 
+                 
+             }
+            </div> 
+            </div>
+        </div>
+    </div>
+<script>
+    $(document).ready(function() {
+        $('#sidebar .active').removeClass('active');
+        $('#sidebar #turnos').addClass('active open');
+        $('#sidebar #turnos #generarturnos').addClass('active');
+
+        $('.datepicker').datepicker();
+    });
+</script>

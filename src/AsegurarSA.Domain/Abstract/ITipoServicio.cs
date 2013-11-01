@@ -8,7 +8,7 @@ namespace AsegurarSA.Domain.Abstract
 {
     public interface ITipoServicio
     {
-        IQueryable<TipoServicio> TipoServicio { get; }
+        IEnumerable<TipoServicio> TipoServicio { get; }
         void SaveTipoServicio(TipoServicio tipoServicio);
         void DeleteTipoServicio(TipoServicio tipoServicio);
     }

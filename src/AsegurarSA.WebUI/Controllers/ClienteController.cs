@@ -5,6 +5,7 @@ using System.Net.Mime;
 using System.Web;
 using System.Web.Mvc;
 using AsegurarSA.Domain.Abstract;
+using AsegurarSA.Domain.Concrete;
 using AsegurarSA.Domain.Entities;
 
 namespace AsegurarSA.WebUI.Controllers
@@ -14,6 +15,7 @@ namespace AsegurarSA.WebUI.Controllers
         //
         // GET: /Cliente/
         private IClienteRepository _repository;
+        private ITipoServicio _repository2 = new EFTipoServicioRepository();
 
         public ClienteController(IClienteRepository repository)
         {
@@ -28,14 +30,18 @@ namespace AsegurarSA.WebUI.Controllers
 
         public ActionResult Create(Cliente cliente = null)
         {
+            IEnumerable<TipoServicio> listaServicios = _repository2.TipoServicio;
+            var list = new SelectList(listaServicios,"TipoServicioId", "Nombre",cliente.TipoServicioId);
+            ViewData["listaServicios"] = list;
            return View(cliente);
         }
 
         [HttpPost]
-        public ActionResult Editar(Cliente cliente, int empresa = 3)
+        public ActionResult Editar(Cliente cliente, int empresa = 3, int servicio=0)
         {
            // var e = empresa == 3 ? "Movistar" : empresa == 2 ? "Personal" : empresa == 1 ? "Claro" : "Movistar";
             cliente.EmpresaId = empresa;
+            cliente.TipoServicioId = servicio;
             if (ModelState.IsValid)
             {
                 _repository.SaveCliente(cliente);

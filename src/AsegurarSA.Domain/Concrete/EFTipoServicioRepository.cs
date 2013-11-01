@@ -11,7 +11,7 @@ namespace AsegurarSA.Domain.Concrete
     {
         private EFDbContext context = new EFDbContext();
 
-        public IQueryable<Entities.TipoServicio> TipoServicio
+        public IEnumerable<Entities.TipoServicio> TipoServicio
         {
             get { return context.TipoServicios.Where(t=> t.Eliminado == false); }
         }
