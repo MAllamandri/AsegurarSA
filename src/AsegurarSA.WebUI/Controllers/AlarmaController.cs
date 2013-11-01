@@ -4,9 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using System.Web.Script.Serialization;
 using AsegurarSA.Domain.Abstract;
 using AsegurarSA.Domain.Entities;
 using AsegurarSA.WebUI.Models;
+using Newtonsoft.Json;
 
 namespace AsegurarSA.WebUI.Controllers
 {
@@ -55,6 +57,13 @@ namespace AsegurarSA.WebUI.Controllers
             Alarma alarma = _repository.BuscarAlarma(AlarmaId);
             _repository.DeleteAlarma(alarma);
             return RedirectToAction("ListaAlarmaCliente", "Alarma", new { clienteId = alarma.ClienteId });
+        }
+
+        public ActionResult GetAlamasCliente(int clienteId)
+        {
+            return Json(_repository.ListaAlarmaCliente(clienteId), JsonRequestBehavior.AllowGet);
+              //  JsonConvert.SerializeObject();
+
         }
     }
 }
