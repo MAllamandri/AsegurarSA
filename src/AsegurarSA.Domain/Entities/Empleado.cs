@@ -21,15 +21,10 @@ namespace AsegurarSA.Domain.Entities
         public string Apellido { get; set; }
         [Required]
         public string Telefono { get; set; }
-
-
-
         [Required]
         [Display(Name="Fecha Nacimiento")]
         [DataType(DataType.Date)]
         public DateTime FechaNacimiento { get; set; }
         public Boolean Eliminado { get; set; }
-
-        
     }
 }

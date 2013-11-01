@@ -114,6 +114,14 @@
     <Compile Include="Migrations\201310310055041_turnosempleado.Designer.cs">
       <DependentUpon>201310310055041_turnosempleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201310312055512_tareas.cs" />
+    <Compile Include="Migrations\201310312055512_tareas.Designer.cs">
+      <DependentUpon>201310312055512_tareas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201311010303346_required.cs" />
+    <Compile Include="Migrations\201311010303346_required.Designer.cs">
+      <DependentUpon>201311010303346_required.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201310312000042_AlarmaCoordenadas.cs" />
     <Compile Include="Migrations\201310312000042_AlarmaCoordenadas.Designer.cs">
       <DependentUpon>201310312000042_AlarmaCoordenadas.cs</DependentUpon>
@@ -152,6 +160,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201310310055041_turnosempleado.resx">
       <DependentUpon>201310310055041_turnosempleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310312055512_tareas.resx">
+      <DependentUpon>201310312055512_tareas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311010303346_required.resx">
+      <DependentUpon>201311010303346_required.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201310312000042_AlarmaCoordenadas.resx">
       <DependentUpon>201310312000042_AlarmaCoordenadas.cs</DependentUpon>

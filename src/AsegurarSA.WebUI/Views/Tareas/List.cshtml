@@ -1,0 +1,69 @@
+﻿@model IEnumerable<AsegurarSA.Domain.Entities.Tarea>
+
+@{
+    ViewBag.Title = "Lista de Tareas No Resueltas";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="widget-box">
+            <div class="widget-title">
+                <span class="icon">
+                    <i class="glyphicon glyphicon-th"></i>
+                </span>
+                <h5>Lista de Tareas</h5>
+            </div>
+            <div class="widget-content nopadding">
+                <table class="table table-striped table-hover text-left">
+                    <thead>
+                        <tr class="t-left">
+                            <th>Fecha</th>
+                            <th>Descripcion</th>
+                            <th>Tipo</th>
+                            <th>Domicilio</th>
+                            <th>Cliente</th>
+                            <th>Empleado Tecnico</th>
+                            <th style="width: 6px;"></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var t in Model)
+                        {
+                            <tr>
+                                <td>@t.Fecha.ToShortDateString()</td>
+                                <td>@t.Descripcion</td>
+                                <td>@t.Tipo</td>
+                                <td>@t.Domicilio</td>
+                                <td>@t.Empleado.Nombre, @t.Empleado.Apellido</td>
+                                <td>@t.Cliente.Nombre, @t.Cliente.Apellido</td>
+                                <td><a href= "@Url.Action("Resolver", "Tareas", new { TareaId = @t.TareaId })"><i class="glyphicon glyphicon-ok" /></a></td>
+                                <td><a href= "@Url.Action("Create", "Tareas", new { TareaId = @t.TareaId })"><i class="glyphicon glyphicon-edit" /></a></td>
+                                <td><a href="@Url.Action("Delete", "Tareas", new { TareaId = @t.TareaId })"><i class="glyphicon glyphicon-remove" /></a></td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="">
+            <a href="/Tareas/Create"><i class="" /><i class="glyphicon glyphicon-plus"></i>Agregar tarea</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('#sidebar .active').removeClass('active');
+        $('#sidebar #tareas').addClass('active open');
+        $('#sidebar #tareas #tecnicas').addClass('active');
+    });
+</script>

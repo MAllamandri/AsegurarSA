@@ -154,6 +154,8 @@
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\EmpleadosController.cs" />
     <Compile Include="Controllers\LlamadaController.cs" />
+    <Compile Include="Controllers\ReportesController.cs" />
+    <Compile Include="Controllers\TareasController.cs" />
     <Compile Include="Controllers\TipoServicioController.cs" />
     <Compile Include="Controllers\TurnoController.cs" />
     <Compile Include="Global.asax.cs">
@@ -162,6 +164,7 @@
     <Compile Include="Infraestructura\NinjectControllerFactory.cs" />
     <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\AlarmaViewModel.cs" />
+    <Compile Include="Models\TareaViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -548,6 +551,9 @@
     <Content Include="Views\Cliente\Create.cshtml" />
     <Content Include="Views\Turno\ObtenerTurnos.cshtml" />
     <Content Include="Views\Turno\ObtenerInformeTurnos.cshtml" />
+    <Content Include="Views\Reportes\ClientesPerdidos.cshtml" />
+    <Content Include="Views\Tareas\List.cshtml" />
+    <Content Include="Views\Tareas\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -90,7 +90,8 @@ namespace AsegurarSA.Domain.Concrete
         public IEnumerable<Turno> ObtenerListaTurnos()
         {
             var ultimoturno = context.Turnos.AsEnumerable().Last();
-            return context.Turnos.Where(t => t.FechaDia ==  ultimoturno.FechaDia);
+            IEnumerable<Turno> lista =  context.Turnos.Where(t => t.FechaDia ==  ultimoturno.FechaDia);
+            return lista;
         }
 
         public IEnumerable<Turno> ObtenerTurnos(DateTime fechaInico, DateTime fechaTope)

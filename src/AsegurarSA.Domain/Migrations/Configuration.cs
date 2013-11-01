@@ -82,7 +82,8 @@ namespace AsegurarSA.Domain.Migrations
                 roles.CreateRole("Root");
                 roles.CreateRole("Administrador");
                 roles.CreateRole("Gerente");
-                roles.CreateRole("Empleado");
+                roles.CreateRole("Empleado Tecnico");
+                roles.CreateRole("Empleado Monitoreo");
             }
             if (membership.GetUser("pibarra", false) == null)
             {
