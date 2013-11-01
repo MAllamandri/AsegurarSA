@@ -88,34 +88,6 @@
     <Compile Include="Entities\Tarea.cs" />
     <Compile Include="Entities\TipoServicio.cs" />
     <Compile Include="Entities\Turno.cs" />
-    <Compile Include="Migrations\201311011850530_inicial.cs" />
-    <Compile Include="Migrations\201311011850530_inicial.Designer.cs">
-      <DependentUpon>201311011850530_inicial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201311011909108_inicial1.cs" />
-    <Compile Include="Migrations\201311011909108_inicial1.Designer.cs">
-      <DependentUpon>201311011909108_inicial1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201311011954390_inicial2.cs" />
-    <Compile Include="Migrations\201311011954390_inicial2.Designer.cs">
-      <DependentUpon>201311011954390_inicial2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201311012005491_inicial3.cs" />
-    <Compile Include="Migrations\201311012005491_inicial3.Designer.cs">
-      <DependentUpon>201311012005491_inicial3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201311012055403_inicial4.cs" />
-    <Compile Include="Migrations\201311012055403_inicial4.Designer.cs">
-      <DependentUpon>201311012055403_inicial4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201311012058132_inicial5.cs" />
-    <Compile Include="Migrations\201311012058132_inicial5.Designer.cs">
-      <DependentUpon>201311012058132_inicial5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201311012110276_inicial6.cs" />
-    <Compile Include="Migrations\201311012110276_inicial6.Designer.cs">
-      <DependentUpon>201311012110276_inicial6.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -125,29 +97,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201311011850530_inicial.resx">
-      <DependentUpon>201311011850530_inicial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201311011909108_inicial1.resx">
-      <DependentUpon>201311011909108_inicial1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201311011954390_inicial2.resx">
-      <DependentUpon>201311011954390_inicial2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201311012005491_inicial3.resx">
-      <DependentUpon>201311012005491_inicial3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201311012055403_inicial4.resx">
-      <DependentUpon>201311012055403_inicial4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201311012058132_inicial5.resx">
-      <DependentUpon>201311012058132_inicial5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201311012110276_inicial6.resx">
-      <DependentUpon>201311012110276_inicial6.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
