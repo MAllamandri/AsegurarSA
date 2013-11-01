@@ -39,14 +39,14 @@ namespace AsegurarSA.Domain.Migrations
             context.Empleados.AddOrUpdate(
               p => p.Nombre,
              //   new Empleado { UserName = "pibarra", Nombre = "Pablo", Apellido = "Ibarra", FechaNacimiento = DateTime.Now,Telefono = "554564"},
-                new Empleado { UserName = "mallamandri", Nombre = "Maximiliano", Apellido = "Allamandri", FechaNacimiento = DateTime.Now, Telefono = "554564",Eliminado = false},
-                new Empleado { UserName = "mfrund", Nombre = "Marcos", Apellido = "Frund", FechaNacimiento = DateTime.Now, Telefono = "554564", Eliminado = false },
-                new Empleado { UserName = "ekuschnir", Nombre = "Ezequiel", Apellido = "Kuschnir", FechaNacimiento = DateTime.Now, Telefono = "554564", Eliminado = false },
-                new Empleado { UserName = "everonesse", Nombre = "Estefano", Apellido = "Veronesse", FechaNacimiento = DateTime.Now, Telefono = "554564", Eliminado = false },
-                new Empleado { UserName = "mallamandri", Nombre = "Jose", Apellido = "Allamandri", FechaNacimiento = DateTime.Now, Telefono = "554564",Eliminado = false},
-                new Empleado { UserName = "mfrund", Nombre = "Manuel", Apellido = "Frund", FechaNacimiento = DateTime.Now, Telefono = "554564", Eliminado = false },
-                new Empleado { UserName = "ekuschnir", Nombre = "Lucho", Apellido = "Kuschnir", FechaNacimiento = DateTime.Now, Telefono = "554564", Eliminado = false },
-                new Empleado { UserName = "everonesse", Nombre = "Javier", Apellido = "Veronesse", FechaNacimiento = DateTime.Now, Telefono = "554564", Eliminado = false }
+                new Empleado { EmpleadoId = 2, UserName = "mallamandri", Nombre = "Maximiliano", Apellido = "Allamandri", FechaNacimiento = DateTime.Now, Telefono = "554564",Eliminado = false},
+                new Empleado { EmpleadoId = 3, UserName = "mfrund", Nombre = "Marcos", Apellido = "Frund", FechaNacimiento = DateTime.Now, Telefono = "554564", Eliminado = false },
+                new Empleado { EmpleadoId = 4, UserName = "ekuschnir", Nombre = "Ezequiel", Apellido = "Kuschnir", FechaNacimiento = DateTime.Now, Telefono = "554564", Eliminado = false },
+                new Empleado { EmpleadoId = 5, UserName = "everonesse", Nombre = "Estefano", Apellido = "Veronesse", FechaNacimiento = DateTime.Now, Telefono = "554564", Eliminado = false },
+                new Empleado { EmpleadoId = 6, UserName = "mallamandri", Nombre = "Jose", Apellido = "Allamandri", FechaNacimiento = DateTime.Now, Telefono = "554564", Eliminado = false },
+                new Empleado { EmpleadoId = 7, UserName = "mfrund", Nombre = "Manuel", Apellido = "Frund", FechaNacimiento = DateTime.Now, Telefono = "554564", Eliminado = false },
+                new Empleado { EmpleadoId = 8, UserName = "ekuschnir", Nombre = "Lucho", Apellido = "Kuschnir", FechaNacimiento = DateTime.Now, Telefono = "554564", Eliminado = false },
+                new Empleado { EmpleadoId = 9, UserName = "everonesse", Nombre = "Javier", Apellido = "Veronesse", FechaNacimiento = DateTime.Now, Telefono = "554564", Eliminado = false }
             );
 
             context.Clientes.AddOrUpdate(
@@ -59,10 +59,10 @@ namespace AsegurarSA.Domain.Migrations
                 );
             context.Turnos.AddOrUpdate(
                 t => t.TurnoId,
-                    new Turno {  FechaDia =  Convert.ToDateTime("25/10/2013"), EmpleadoId = 1, Dia = 1, Semana = 5, TipoTurno = 1, Franco =true },
+                    new Turno {  FechaDia = Convert.ToDateTime("25/10/2013"), EmpleadoId = 1, Dia = 1, Semana = 5, TipoTurno = 1, Franco = true },
                     new Turno {  FechaDia = Convert.ToDateTime("25/10/2013"), EmpleadoId = 2, Dia = 6, Semana = 4, TipoTurno = 1, Franco = false },
                     new Turno {  FechaDia = Convert.ToDateTime("25/10/2013"), EmpleadoId = 3, Dia = 4, Semana = 4, TipoTurno = 1, Franco = false },
-                    new Turno {  FechaDia = Convert.ToDateTime("25/10/2013") , EmpleadoId = 4, Dia = 1, Semana = 5, TipoTurno = 2, Franco = true},
+                    new Turno {  FechaDia = Convert.ToDateTime("25/10/2013"), EmpleadoId = 4, Dia = 1, Semana = 5, TipoTurno = 2, Franco = true},
                     new Turno {  FechaDia = Convert.ToDateTime("25/10/2013"), EmpleadoId = 5, Dia = 6, Semana = 4, TipoTurno = 2, Franco = false },
                     new Turno {  FechaDia = Convert.ToDateTime("25/10/2013"), EmpleadoId = 6, Dia = 4, Semana = 4, TipoTurno = 2, Franco = false },
                     new Turno {  FechaDia = Convert.ToDateTime("25/10/2013"), EmpleadoId = 7, Dia = 1, Semana = 5, TipoTurno = 3, Franco = true },
@@ -77,7 +77,7 @@ namespace AsegurarSA.Domain.Migrations
             var roles = (SimpleRoleProvider)Roles.Provider;
             var membership = (SimpleMembershipProvider)Membership.Provider;
 
-            if (!roles.RoleExists("Admin"))
+            if (!roles.RoleExists("Root"))
             {
                 roles.CreateRole("Root");
                 roles.CreateRole("Administrador");
@@ -94,6 +94,7 @@ namespace AsegurarSA.Domain.Migrations
                 user.Add("FechaNacimiento", DateTime.Now);
                 user.Add("Telefono","565758");
                 user.Add("Eliminado", "false");
+                user.Add("EmpleadoId","1");
                 var e = new MembershipCreateStatus();
                 membership.CreateUserAndAccount("pibarra", "admin", false, user);
                     // new { Nombre = "Pablo" });//("pibarra", "admin",null,null,null,true,null,out e);
@@ -101,13 +102,7 @@ namespace AsegurarSA.Domain.Migrations
             if (!roles.GetRolesForUser("pibarra").Contains("Root"))
             {
                 roles.AddUsersToRoles(new[] { "pibarra" }, new[] { "Root" });
-            }
-            //if (membership.GetUser("joe", false) == null)
-            //{
-            // //   membership.CreateUserAndAccount("joe", "test");
-            //}
-
-            
+            }            
         }
     }
 }

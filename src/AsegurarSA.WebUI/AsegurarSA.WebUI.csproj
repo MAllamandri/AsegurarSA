@@ -456,6 +456,7 @@
     <Content Include="Content\themes\AsegurarSA\fonts\glyphiconshalflings-regular.ttf" />
     <Content Include="Content\themes\AsegurarSA\fonts\glyphiconshalflings-regular.woff" />
     <Content Include="Content\themes\AsegurarSA\img\demo\Thumbs.db" />
+    <Content Include="Scripts\AsegurarSA.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Content\themes\AsegurarSA\fonts\fontawesome-webfont.eot" />
