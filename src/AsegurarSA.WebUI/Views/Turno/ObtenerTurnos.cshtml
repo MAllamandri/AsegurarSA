@@ -4,7 +4,7 @@
     ViewBag.Title = "Obtener Turnos";
 }
 
-<h2>ObtenerTurnos</h2>
+<h2>Obtener Turnos</h2>
 <div class="row">
     <div class="col-xs-12">
 
@@ -31,12 +31,9 @@
                         {
                             <tr>
                                 <td>@e.Empleado.Apellido, @e.Empleado.Nombre</td>
-                                <td>@e.TipoTurno</td> h
+                                <td>@e.TipoTurno</td>
                                 <td>@e.Franco</td>
                                 <td>@e.FechaDia.ToShortDateString()</td>
-                                @* <td><a href= "@Url.Action("Modificar", "Empleados", new { EmpleadoId = @e.EmpleadoId })"><i class="glyphicon glyphicon-edit" /></a></td>
-                                <td><a href="@Url.Action("Delete", "Empleados", new { EmpleadoId = @e.EmpleadoId })"><i class="glyphicon glyphicon-remove" /></a></td>*@
-
                             </tr>
                         }
 

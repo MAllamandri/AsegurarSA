@@ -16,6 +16,7 @@ namespace AsegurarSA.Domain.Concrete
         public DbSet<Alarma> Alarmas { get; set; }
         public DbSet<Evento> Eventos { get; set; }
         public DbSet<Turno> Turnos { get; set; } 
+        public DbSet<Tarea> Tareas { get; set; } 
 
     }
 }

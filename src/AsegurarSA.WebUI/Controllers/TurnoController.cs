@@ -23,8 +23,8 @@ namespace AsegurarSA.WebUI.Controllers
         
         public ActionResult Index()
         {
-            IEnumerable<Turno> lista = _repository.ObtenerListaTurnos();
-            ViewBag.UltimoTurno = lista.ElementAt(0).FechaDia;
+            var ultimoTurno = _repository.Turnos.AsEnumerable().Last();
+            ViewData["ultimo"] = Convert.ToString(ultimoTurno.FechaDia.Date);
             return View();
         }
 

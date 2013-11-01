@@ -10,8 +10,9 @@ namespace AsegurarSA.Domain.Concrete
     public class EFClienteRepository: IClienteRepository
     {
         private EFDbContext context = new EFDbContext();
+        private IAlarmaRepository contexto = new EFAlarmaRepositry();
 
-        public IQueryable<Entities.Cliente> Cliente
+        public IEnumerable<Entities.Cliente> Cliente
         {
             get { return context.Clientes.Where(c => c.Eliminado != true); }
         }
@@ -35,15 +36,15 @@ namespace AsegurarSA.Domain.Concrete
             if (cliente != null)
             {
                 EFAlarmaRepositry alarma = new EFAlarmaRepositry();
-                IQueryable<Alarma> listaAlarmasCliente = alarma.ListaAlarmaCliente(cliente.ClienteId);
+                IQueryable<Alarma> listaAlarmasCliente = contexto.ListaAlarmaCliente(cliente.ClienteId);
                 foreach (var alarma1 in listaAlarmasCliente)
                 {
                     alarma.DeleteAlarma(alarma1);
                 }
                 cliente.Eliminado = true;
                 context.Entry(cliente).State = System.Data.Entity.EntityState.Modified;
+                context.SaveChanges();
             }
-            context.SaveChanges();
         }
 
         public Cliente ObtenerCliente(int idCliente)
@@ -54,6 +55,11 @@ namespace AsegurarSA.Domain.Concrete
                 return cliente;
             }
             return null;
+        }
+
+        public IEnumerable<Cliente> ObtenerClientesPerdidos()
+        {
+            return context.Clientes.Where(c => c.Eliminado == true);
         }
 
     }

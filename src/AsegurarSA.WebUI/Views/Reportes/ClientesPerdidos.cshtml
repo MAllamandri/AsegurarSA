@@ -1,0 +1,42 @@
+﻿@model IEnumerable<AsegurarSA.Domain.Entities.Cliente>
+
+@{
+    ViewBag.Title = "Clientes Perdidos";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="widget-box">
+            <div class="widget-title">
+                <span class="icon">
+                    <i class="glyphicon glyphicon-th"></i>
+                </span>
+            </div>
+            <div class="widget-content nopadding">
+                <table class="table table-striped table-hover text-left">
+                    <thead>
+                        <tr class="t-left">
+                            <th>Apellido, Nombre</th>
+                            <th>Telefono Principal</th>
+                            <th>Telefono Celular</th>
+                            <th>Domicilio</th>
+                            <th style="width: 6px;"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var c in Model)
+                        {
+                            <tr>
+                                <td>@c.Apellido, @c.Nombre</td>
+                                <td>@c.Telefono1</td>
+                                <td>@c.Telefono2</td>
+                                <td>@c.Domicilio</td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

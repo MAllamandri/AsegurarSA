@@ -1,0 +1,82 @@
+﻿@using AsegurarSA.Domain.Entities
+@using AsegurarSA.WebUI.Models
+@model AsegurarSA.Domain.Entities.Tarea
+
+
+
+@{
+    ViewBag.Title = "Agregar nueva tarea";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="widget-box">
+            <div class="widget-title">
+                <span class="icon">
+                    <i class="icon-user"></i>
+                </span>
+                <h5>Crear nueva tarea</h5>
+            </div>
+            <div class="widget-content nopadding">
+                @using (Html.BeginForm("Create", "Tareas", FormMethod.Post, new { @class = "form-horizontal" }))
+                {
+                    @Html.HiddenFor(model => model.TareaId)
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Fecha, new { @class = "control-label" })
+                        <div class="controls">
+                            <input id="Fecha" name="Fecha" type="text" value='@Model.Fecha.ToString("d")' class=" datepicker form-control input-sm" data-date-format="dd-mm-yyyy" data-date='' />                            
+                        </div>
+                    </div>   
+                    
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Descripcion, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.TextBoxFor(model => model.Descripcion, new { @class = "form-control input-sm" })
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Domicilio, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.TextBoxFor(model => model.Domicilio, new { @class = "form-control input-sm" })
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Cliente, new { @class = "control-label" })
+                        <div class="controls">
+                           @Html.DropDownList("cliente",ViewData["listaClientes"] as SelectList, new { @class = "form-control input-sm" })
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Empleado, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.DropDownList("empleado",ViewData["listaEmpleados"] as SelectList, new { @class = "form-control input-sm" })
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Tipo, new { @class = "control-label" })
+                        <div class="controls">
+                            @Html.DropDownListFor(a => a.Tipo, TareaViewModel.TareaModel.Enum.GetItems<TipoTarea>().Select(x => new SelectListItem() { Text = x.ToString(), Value = x.ToString() }), new { @class = "form-control input-sm" })
+                        </div>
+                    </div>               
+                    <div class="form-actions">
+                        <button class="btn btn-primary btn-sm" type="submit">Guardar</button>
+                        <a href="/Tareas/List" class="text-danger">Cancelar</a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('#sidebar .active').removeClass('active');
+        $('#sidebar #tareas').addClass('active open');
+        
+        $('.datepicker').datepicker();
+    });
+</script>

@@ -65,6 +65,7 @@
     <Compile Include="Abstract\IClienteRepository.cs" />
     <Compile Include="Abstract\IEmpleadoRepository.cs" />
     <Compile Include="Abstract\IEventoRepository.cs" />
+    <Compile Include="Abstract\ITareaRepository.cs" />
     <Compile Include="Abstract\ITipoServicio.cs" />
     <Compile Include="Abstract\ITurnoRepository.cs" />
     <Compile Include="Concrete\EFEventoRepository.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Concrete\EFClienteRepository.cs" />
     <Compile Include="Concrete\EFDbContext.cs" />
     <Compile Include="Concrete\EFEmpleadoRepository.cs" />
+    <Compile Include="Concrete\EFTareaRepository.cs" />
     <Compile Include="Concrete\EFTipoServicioRepository.cs" />
     <Compile Include="Concrete\EFTurnoRepository.cs" />
     <Compile Include="Entities\Alarma.cs" />
@@ -80,6 +82,7 @@
     <Compile Include="Entities\Empleado.cs" />
     <Compile Include="Entities\Evento.cs" />
     <Compile Include="Entities\Empresa.cs" />
+    <Compile Include="Entities\Tarea.cs" />
     <Compile Include="Entities\TipoServicio.cs" />
     <Compile Include="Entities\Turno.cs" />
     <Compile Include="Migrations\201310260531456_Inicial.cs" />
@@ -113,6 +116,14 @@
     <Compile Include="Migrations\201310310055041_turnosempleado.cs" />
     <Compile Include="Migrations\201310310055041_turnosempleado.Designer.cs">
       <DependentUpon>201310310055041_turnosempleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201310312055512_tareas.cs" />
+    <Compile Include="Migrations\201310312055512_tareas.Designer.cs">
+      <DependentUpon>201310312055512_tareas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201311010303346_required.cs" />
+    <Compile Include="Migrations\201311010303346_required.Designer.cs">
+      <DependentUpon>201311010303346_required.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -148,6 +159,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201310310055041_turnosempleado.resx">
       <DependentUpon>201310310055041_turnosempleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310312055512_tareas.resx">
+      <DependentUpon>201310312055512_tareas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311010303346_required.resx">
+      <DependentUpon>201311010303346_required.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

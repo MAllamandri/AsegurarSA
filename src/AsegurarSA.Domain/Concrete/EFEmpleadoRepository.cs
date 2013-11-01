@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Web.Hosting;
@@ -70,6 +72,26 @@ namespace AsegurarSA.Domain.Concrete
                 context.Entry(empleado).State = System.Data.Entity.EntityState.Modified;
             }
             context.SaveChanges();
+        }
+
+
+        public string[] ObtenerEmpleadosPorRol(string Rol)
+        {
+            return Roles.GetUsersInRole(Rol);
+        }
+
+        public IEnumerable<Empleado> ObtenerEmpleadoPorUsername(string[] usernames)
+        {
+            List<Empleado> lista = new List<Empleado>();
+            foreach (var u in usernames)
+            {
+                Empleado e = (Empleado)context.Empleados.AsEnumerable().First(em => em.UserName == u);
+                if (e.Eliminado != true)
+                {
+                    lista.Add(e);   
+                }
+            }
+            return lista;
         }
     }
 }

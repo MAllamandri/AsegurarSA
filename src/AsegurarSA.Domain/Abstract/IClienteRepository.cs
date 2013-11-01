@@ -8,9 +8,10 @@ namespace AsegurarSA.Domain.Abstract
 {
     public interface IClienteRepository
     {
-        IQueryable<Cliente> Cliente { get; }
+        IEnumerable<Cliente> Cliente { get; }
         Cliente ObtenerCliente(int idCliente);
         void SaveCliente(Cliente cliente);
         void DeleteCliente(Cliente cliente);
+        IEnumerable<Cliente> ObtenerClientesPerdidos();
     }
 }
