@@ -12,7 +12,6 @@ namespace AsegurarSA.Domain.Entities
     {
         // Tipo turno ---> 1:mañana 2:tarde 3:noche
         [Key]
-        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int TurnoId { get; set; }
         public int EmpleadoId { get; set; }
         public DateTime FechaDia { get; set; }
