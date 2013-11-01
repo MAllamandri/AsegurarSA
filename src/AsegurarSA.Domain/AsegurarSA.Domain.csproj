@@ -85,53 +85,9 @@
     <Compile Include="Entities\Tarea.cs" />
     <Compile Include="Entities\TipoServicio.cs" />
     <Compile Include="Entities\Turno.cs" />
-    <Compile Include="Migrations\201310260531456_Inicial.cs" />
-    <Compile Include="Migrations\201310260531456_Inicial.Designer.cs">
-      <DependentUpon>201310260531456_Inicial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201310271811554_turno.cs" />
-    <Compile Include="Migrations\201310271811554_turno.Designer.cs">
-      <DependentUpon>201310271811554_turno.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201310281839145_menosempresa.cs" />
-    <Compile Include="Migrations\201310281839145_menosempresa.Designer.cs">
-      <DependentUpon>201310281839145_menosempresa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201310281915297_prueba.cs" />
-    <Compile Include="Migrations\201310281915297_prueba.Designer.cs">
-      <DependentUpon>201310281915297_prueba.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201310292100139_turnoempleado.cs" />
-    <Compile Include="Migrations\201310292100139_turnoempleado.Designer.cs">
-      <DependentUpon>201310292100139_turnoempleado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201310292133565_key.cs" />
-    <Compile Include="Migrations\201310292133565_key.Designer.cs">
-      <DependentUpon>201310292133565_key.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201310292140310_key1.cs" />
-    <Compile Include="Migrations\201310292140310_key1.Designer.cs">
-      <DependentUpon>201310292140310_key1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201310310055041_turnosempleado.cs" />
-    <Compile Include="Migrations\201310310055041_turnosempleado.Designer.cs">
-      <DependentUpon>201310310055041_turnosempleado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201310312055512_tareas.cs" />
-    <Compile Include="Migrations\201310312055512_tareas.Designer.cs">
-      <DependentUpon>201310312055512_tareas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201311010303346_required.cs" />
-    <Compile Include="Migrations\201311010303346_required.Designer.cs">
-      <DependentUpon>201311010303346_required.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201310312000042_AlarmaCoordenadas.cs" />
-    <Compile Include="Migrations\201310312000042_AlarmaCoordenadas.Designer.cs">
-      <DependentUpon>201310312000042_AlarmaCoordenadas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201311010326061_ini.cs" />
-    <Compile Include="Migrations\201311010326061_ini.Designer.cs">
-      <DependentUpon>201311010326061_ini.cs</DependentUpon>
+    <Compile Include="Migrations\201311010347228_initial.cs" />
+    <Compile Include="Migrations\201311010347228_initial.Designer.cs">
+      <DependentUpon>201311010347228_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -144,41 +100,8 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201310260531456_Inicial.resx">
-      <DependentUpon>201310260531456_Inicial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201310271811554_turno.resx">
-      <DependentUpon>201310271811554_turno.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201310281839145_menosempresa.resx">
-      <DependentUpon>201310281839145_menosempresa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201310281915297_prueba.resx">
-      <DependentUpon>201310281915297_prueba.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201310292100139_turnoempleado.resx">
-      <DependentUpon>201310292100139_turnoempleado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201310292133565_key.resx">
-      <DependentUpon>201310292133565_key.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201310292140310_key1.resx">
-      <DependentUpon>201310292140310_key1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201310310055041_turnosempleado.resx">
-      <DependentUpon>201310310055041_turnosempleado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201310312055512_tareas.resx">
-      <DependentUpon>201310312055512_tareas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201311010303346_required.resx">
-      <DependentUpon>201311010303346_required.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201310312000042_AlarmaCoordenadas.resx">
-      <DependentUpon>201310312000042_AlarmaCoordenadas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201311010326061_ini.resx">
-      <DependentUpon>201311010326061_ini.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201311010347228_initial.resx">
+      <DependentUpon>201311010347228_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
