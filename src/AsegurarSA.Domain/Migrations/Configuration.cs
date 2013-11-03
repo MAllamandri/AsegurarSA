@@ -102,9 +102,15 @@ namespace AsegurarSA.Domain.Migrations
                     new Turno { FechaDia = Convert.ToDateTime("25/10/2013"), EmpleadoId = 9, Dia = 4, Semana = 4, TipoTurno = 3, Franco = false }
                 );
 
-
-
-     
+            context.Comisarias.AddOrUpdate(
+                c => c.ComisariaId,
+                    //new Comisaria{ Descripcion = "", Latitud = "", Longitud = ""},
+                    new Comisaria { Descripcion = "Comando Radioeléctrico", Latitud = "-31.253552", Longitud = "-61.484388" },
+                    new Comisaria { Descripcion = "Comisaría N° 2", Latitud = "-31.248828", Longitud = "-61.49681" },
+                    new Comisaria { Descripcion = "Comisaría N° 3", Latitud = "-31.256358", Longitud = "-61.496091" },
+                    new Comisaria { Descripcion = "Comisaría N° 13", Latitud = "-31.240628", Longitud = "-61.481715" },
+                    new Comisaria { Descripcion = "Comisaría Seccional 1°", Latitud = "-31.251589", Longitud = "-61.474805" }
+                );
         }
     }
 }

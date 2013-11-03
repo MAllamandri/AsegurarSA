@@ -13,5 +13,7 @@ namespace AsegurarSA.Domain.Abstract
         Alarma BuscarAlarma(int idAlarma);
         void SaveAlarma(Alarma alarma);
         void DeleteAlarma(Alarma alarma);
+        IQueryable<Comisaria> GetComisarias();
+
     }
 }
