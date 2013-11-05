@@ -10,6 +10,7 @@ using AsegurarSA.Domain.Entities;
 
 namespace AsegurarSA.WebUI.Controllers
 {
+    [Authorize(Roles = "Administrador")]
     public class ClienteController : Controller
     {
         //

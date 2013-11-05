@@ -8,9 +8,8 @@ using AsegurarSA.Domain.Entities;
 
 namespace AsegurarSA.WebUI.Controllers
 {
-    [Authorize    ]
-    public class 
-        EmpleadosController : Controller
+    [Authorize(Roles = "Administrador")]
+    public class EmpleadosController : Controller
     {
         // GET: /Empleados/
         private IEmpleadoRepository _repository;

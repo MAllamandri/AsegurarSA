@@ -12,6 +12,7 @@ using Newtonsoft.Json;
 
 namespace AsegurarSA.WebUI.Controllers
 {
+    [Authorize(Roles = "Administrador")]
     public class AlarmaController : Controller
     {
         private IAlarmaRepository _repository;

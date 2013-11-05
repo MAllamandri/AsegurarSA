@@ -556,6 +556,8 @@
     <Content Include="Views\Tareas\Create.cshtml" />
     <Content Include="Views\Reportes\ClienteServicio.cshtml" />
     <Content Include="Views\Reportes\InformeClientesServicios.cshtml" />
+    <Content Include="Views\Reportes\EmpleadoHoras.cshtml" />
+    <Content Include="Views\Reportes\InformeEmpleadosHoras.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -10,6 +10,7 @@ using Ninject.Infrastructure.Introspection;
 
 namespace AsegurarSA.WebUI.Controllers
 {
+    [Authorize(Roles = "Administrador")]
     public class TurnoController : Controller
     {
         //
@@ -24,7 +25,7 @@ namespace AsegurarSA.WebUI.Controllers
         public ActionResult Index()
         {
             var ultimoTurno = _repository.Turnos.AsEnumerable().Last();
-            ViewData["ultimo"] = Convert.ToString(ultimoTurno.FechaDia.Date);
+            ViewData["ultimo"] = ultimoTurno.FechaDia.ToShortDateString();
             return View();
         }
 

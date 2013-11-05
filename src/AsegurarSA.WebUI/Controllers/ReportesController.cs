@@ -9,6 +9,7 @@ using AsegurarSA.Domain.Entities;
 
 namespace AsegurarSA.WebUI.Controllers
 {
+    [Authorize(Roles = "Gerente, Administrador")]
     public class ReportesController : Controller
     {
         //
@@ -16,6 +17,8 @@ namespace AsegurarSA.WebUI.Controllers
          private IClienteRepository _repository;
         private IClienteServicioRepository _repository2 = new EFClienteServicioRepository();
         private ITipoServicio _repository3 = new EFTipoServicioRepository();
+        private ITurnoRepository _repository4 = new EFTurnoRepository();
+        private IEmpleadoRepository _repository5 = new EFEmpleadoRepository();
 
          public ReportesController(IClienteRepository repository)
         {
@@ -44,5 +47,36 @@ namespace AsegurarSA.WebUI.Controllers
             ViewData["FechaF"] = FechaFin.ToShortDateString();
             return View(listaClienteServicios);
         }
+
+
+        public ActionResult EmpleadoHoras()
+        {
+            var listaEmpleados = _repository5.Empleados;
+            var list = new SelectList(listaEmpleados, "EmpleadoId", "Nombre");
+            ViewData["list"] = list;
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult InformeEmpleadosHoras(DateTime fechaInicio, DateTime fechaFin, int empleado)
+        {
+            if (fechaInicio <= fechaFin)
+            {
+                IEnumerable<Turno> Turnos = _repository4.ObtenerTurnos(fechaInicio, fechaFin);
+                Turnos = Turnos.Where(e => e.EmpleadoId == empleado && e.Franco == false);
+                int cantidadHoras = Turnos.Count()*8;
+                ViewData["horas"] = cantidadHoras;
+                ViewData["fechaInicio"] = fechaInicio.ToShortDateString();
+                ViewData["fechaFin"] = fechaFin.ToShortDateString();
+                Empleado emp = (Empleado)_repository5.Empleados.AsEnumerable().Where(em => em.EmpleadoId == empleado).FirstOrDefault();
+                return View(emp);
+            }
+            else
+            {
+                return RedirectToAction("EmpleadoHoras");
+            }
+        }
+
+
     }
 }

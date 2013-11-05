@@ -88,6 +88,10 @@
     <Compile Include="Entities\Tarea.cs" />
     <Compile Include="Entities\TipoServicio.cs" />
     <Compile Include="Entities\Turno.cs" />
+    <Compile Include="Migrations\201311050251493_inicial.cs" />
+    <Compile Include="Migrations\201311050251493_inicial.Designer.cs">
+      <DependentUpon>201311050251493_inicial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -97,6 +101,11 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201311050251493_inicial.resx">
+      <DependentUpon>201311050251493_inicial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
