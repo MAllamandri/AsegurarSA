@@ -39,7 +39,7 @@ namespace AsegurarSA.WebUI.Infraestructura
             ninjectKernel.Bind<ITurnoRepository>().To<EFTurnoRepository>();
             ninjectKernel.Bind<ITareaRepository>().To<EFTareaRepository>();
             ninjectKernel.Bind<IClienteServicioRepository>().To<EFClienteServicioRepository>();
-
+            ninjectKernel.Bind<IGrabacionesRepository>().To<EFGrabacionesRepository>();
         }
     }
 }

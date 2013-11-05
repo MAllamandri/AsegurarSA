@@ -14,6 +14,7 @@ namespace AsegurarSA.Domain.Entities
         public int EventoId { get; set; }
         public DateTime Fecha { get; set; }
         public int ClienteId { get; set; }
+        public virtual Cliente Cliente { get; set; }
         public string Descripcion { get; set; }
     }
 }

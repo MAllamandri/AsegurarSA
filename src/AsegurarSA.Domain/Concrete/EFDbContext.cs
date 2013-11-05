@@ -19,6 +19,7 @@ namespace AsegurarSA.Domain.Concrete
         public DbSet<Tarea> Tareas { get; set; } 
         public DbSet<ClienteServicio> ClientesServicios { get; set; }
         public DbSet<Comisaria> Comisarias { get; set; }
+        public DbSet<Grabacion> Grabaciones { get; set; }
 
     }
 }

@@ -11,6 +11,8 @@ namespace AsegurarSA.Domain.Concrete
     public class EFEventoRepository:IEventoRepository
     {
         private EFDbContext context = new EFDbContext();
+       
+        
         public IEnumerable<Entities.Evento> ObtenerEventos(int IdCliente)
         {
             return context.Eventos.Where(e => e.ClienteId == IdCliente);
@@ -28,6 +30,12 @@ namespace AsegurarSA.Domain.Concrete
                 context.Entry(evento).State = System.Data.Entity.EntityState.Added;
             }
             context.SaveChanges();
+        }
+
+
+        public IEnumerable<Evento> Eventos()
+        {
+            return context.Eventos;
         }
     }
 }

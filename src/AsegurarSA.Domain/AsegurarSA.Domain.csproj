@@ -66,6 +66,7 @@
     <Compile Include="Abstract\IClienteServicioRepository.cs" />
     <Compile Include="Abstract\IEmpleadoRepository.cs" />
     <Compile Include="Abstract\IEventoRepository.cs" />
+    <Compile Include="Abstract\IGrabacionesRepository.cs" />
     <Compile Include="Abstract\ITareaRepository.cs" />
     <Compile Include="Abstract\ITipoServicio.cs" />
     <Compile Include="Abstract\ITurnoRepository.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="Concrete\EFClienteRepository.cs" />
     <Compile Include="Concrete\EFDbContext.cs" />
     <Compile Include="Concrete\EFEmpleadoRepository.cs" />
+    <Compile Include="Concrete\EFGrabacionesRepository.cs" />
     <Compile Include="Concrete\EFTareaRepository.cs" />
     <Compile Include="Concrete\EFTipoServicioRepository.cs" />
     <Compile Include="Concrete\EFTurnoRepository.cs" />
@@ -86,17 +88,10 @@
     <Compile Include="Entities\Empleado.cs" />
     <Compile Include="Entities\Evento.cs" />
     <Compile Include="Entities\Empresa.cs" />
+    <Compile Include="Entities\Grabacion.cs" />
     <Compile Include="Entities\Tarea.cs" />
     <Compile Include="Entities\TipoServicio.cs" />
     <Compile Include="Entities\Turno.cs" />
-    <Compile Include="Migrations\201311020312484_Inicial.cs" />
-    <Compile Include="Migrations\201311020312484_Inicial.Designer.cs">
-      <DependentUpon>201311020312484_Inicial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201311032308053_comisarias.cs" />
-    <Compile Include="Migrations\201311032308053_comisarias.Designer.cs">
-      <DependentUpon>201311032308053_comisarias.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -106,14 +101,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201311020312484_Inicial.resx">
-      <DependentUpon>201311020312484_Inicial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201311032308053_comisarias.resx">
-      <DependentUpon>201311032308053_comisarias.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

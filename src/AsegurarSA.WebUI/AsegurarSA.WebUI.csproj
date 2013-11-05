@@ -153,6 +153,7 @@
     <Compile Include="Controllers\AlarmaController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\EmpleadosController.cs" />
+    <Compile Include="Controllers\GrabacionController.cs" />
     <Compile Include="Controllers\LlamadaController.cs" />
     <Compile Include="Controllers\ReportesController.cs" />
     <Compile Include="Controllers\TareasController.cs" />
@@ -558,9 +559,15 @@
     <Content Include="Views\Reportes\InformeClientesServicios.cshtml" />
     <Content Include="Views\Reportes\EmpleadoHoras.cshtml" />
     <Content Include="Views\Reportes\InformeEmpleadosHoras.cshtml" />
+    <Content Include="Views\Reportes\Eventos.cshtml" />
+    <Content Include="Views\Reportes\InformeEventos.cshtml" />
+    <Content Include="Views\Grabacion\Upload.cshtml" />
+    <Content Include="Views\Grabacion\Grabaciones.cshtml" />
+    <Content Include="Views\Grabacion\Reproducir.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Grabaciones\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

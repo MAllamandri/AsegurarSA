@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Grabacion";
+}
+
+ @using (Html.BeginForm("FileUpload", "Grabacion", FormMethod.Post, new { enctype = "multipart/form-data" }))
+ {
+     <fieldset>
+         
+          <div class="form-group">
+                        @Html.Label("Clientes", new { @class = "control-label" })
+                        <div class="controls">
+                           @Html.DropDownList("cliente",ViewData["listClientes"] as SelectList, new { @class = "form-control input-sm" })
+                        </div>
+                    </div>
+         <div id="uploader">
+             <input type='file' name='filename' id='filename'>
+         </div>
+
+         <p>
+             <input type="submit" value="Agregar" />
+         </p>
+     </fieldset>
+}

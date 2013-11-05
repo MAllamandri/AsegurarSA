@@ -14,11 +14,12 @@ namespace AsegurarSA.WebUI.Controllers
     {
         //
         // GET: /Reportes/
-         private IClienteRepository _repository;
+        private IClienteRepository _repository;
         private IClienteServicioRepository _repository2 = new EFClienteServicioRepository();
         private ITipoServicio _repository3 = new EFTipoServicioRepository();
         private ITurnoRepository _repository4 = new EFTurnoRepository();
         private IEmpleadoRepository _repository5 = new EFEmpleadoRepository();
+        private IEventoRepository _repository6 = new EFEventoRepository();
 
          public ReportesController(IClienteRepository repository)
         {
@@ -75,6 +76,17 @@ namespace AsegurarSA.WebUI.Controllers
             {
                 return RedirectToAction("EmpleadoHoras");
             }
+        }
+
+        public ActionResult Eventos()
+        {
+            return View();
+        }
+
+        public ActionResult InformeEventos(DateTime fechaInicio, DateTime fechaFin)
+        {
+            IEnumerable<Evento> eventos = _repository6.Eventos().AsEnumerable().Where(e => e.Fecha.Date >= fechaInicio && e.Fecha.Date <= fechaFin);
+            return View(eventos);
         }
 
 

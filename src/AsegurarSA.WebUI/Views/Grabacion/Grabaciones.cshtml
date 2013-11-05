@@ -1,0 +1,47 @@
+﻿@model IEnumerable<AsegurarSA.Domain.Entities.Grabacion>
+@{
+    ViewBag.Title = "Grabaciones de " + @ViewData["cliente"];
+}
+<div class="row">
+    <div class="col-xs-12">
+
+        <div class="widget-box">
+            <div class="widget-title">
+                <span class="icon">
+                    <i class="glyphicon glyphicon-th"></i>
+                </span>
+                <h5>Lista de Grabaciones</h5>
+            </div>
+            <div class="widget-content nopadding">
+                <table class="table table-striped table-hover text-left">
+                    <thead>
+                        <tr class="t-left">
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                            <th>Reproducir</th>
+
+                            <th style="width: 6px;"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var c in Model)
+                        {
+                            <tr>
+                                <td>@c.Fecha.ToShortDateString()</td>
+                                <td>@c.Fecha.ToShortTimeString()</td>
+                                <td><a href="@Url.Action("Reproducir", "Grabacion", new { nombre = @c.PathGrabacion })"><i class="glyphicon glyphicon-play" /></a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        $('#sidebar .active').removeClass('active');
+        $('#sidebar #cliente').addClass('active open');
+        $('#sidebar #cliente #list').addClass('active');
+    });
+</script>

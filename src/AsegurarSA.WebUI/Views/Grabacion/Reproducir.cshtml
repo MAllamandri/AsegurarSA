@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Reproducir";
+}
+
+<video width="500" height="300" controls="controls">
+    <source src= "@ViewData["path"].ToString()" type="video/mp4" />
+    <source src= "@ViewData["path"].ToString()"type="video/ogg" />
+    Your browser does not support the video tag.
+</video>
+<script>
+    $(document).ready(function() {
+        $('#sidebar .active').removeClass('active');
+        $('#sidebar #cliente').addClass('active open');
+        $('#sidebar #cliente #list').addClass('active');
+    });
+</script>

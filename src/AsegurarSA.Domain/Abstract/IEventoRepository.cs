@@ -8,6 +8,7 @@ namespace AsegurarSA.Domain.Abstract
 {
     public interface IEventoRepository
     {
+        IEnumerable<Evento> Eventos();
         IEnumerable<Evento> ObtenerEventos(int idCliente);
         void SaveEvento(Evento evento);
     }

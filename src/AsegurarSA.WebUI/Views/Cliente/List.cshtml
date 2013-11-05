@@ -27,6 +27,7 @@
                             <th style="width: 6px;"></th>
                             <th></th>
                             <th></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -41,6 +42,7 @@
                                 <td><a href="@Url.Action("Modificar", "Cliente", new { clienteId = @c.ClienteId })"><i class="glyphicon glyphicon-edit"></i></a></td>
                                 <td><a href="@Url.Action("ListaAlarmaCliente", "Alarma", new { clienteId = @c.ClienteId })"><i class="glyphicon glyphicon-bell" /></a></td>
                                 <td><a href="@Url.Action("Delete", "Cliente", new { clienteId = @c.ClienteId })"><i class="glyphicon glyphicon-remove" /></a></td>
+                                <td><a href="@Url.Action("Grabaciones", "Grabacion", new { clienteId = @c.ClienteId })"><i class="glyphicon glyphicon-play" /></a></td>
                             </tr>
                         }
 

@@ -26,5 +26,6 @@ namespace AsegurarSA.Domain.Entities
         [DataType(DataType.Date)]
         public DateTime FechaNacimiento { get; set; }
         public Boolean Eliminado { get; set; }
+        public string Style { get; set; }
     }
 }
