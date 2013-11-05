@@ -50,7 +50,6 @@ namespace AsegurarSA.WebUI.Controllers
 
             _repository.SaveAlarma(alarma);
             return RedirectToAction("ListaAlarmaCliente", "Alarma", new {clienteId = alarma.ClienteId});
-            //return RedirectToAction("List", "Empleados");
         }
 
         public ActionResult DeleteAlarma(int AlarmaId=0)
@@ -63,8 +62,13 @@ namespace AsegurarSA.WebUI.Controllers
         public ActionResult GetAlamasCliente(int clienteId)
         {
             return Json(_repository.ListaAlarmaCliente(clienteId), JsonRequestBehavior.AllowGet);
-              //  JsonConvert.SerializeObject();
-
         }
+
+        public ActionResult GetComisarias()
+        {
+
+            return Json(_repository.GetComisarias(), JsonRequestBehavior.AllowGet);
+        }
+
     }
 }

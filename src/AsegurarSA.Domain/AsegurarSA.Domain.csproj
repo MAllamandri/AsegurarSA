@@ -82,15 +82,20 @@
     <Compile Include="Entities\Alarma.cs" />
     <Compile Include="Entities\Cliente.cs" />
     <Compile Include="Entities\ClienteServicio.cs" />
+    <Compile Include="Entities\Comisaria.cs" />
     <Compile Include="Entities\Empleado.cs" />
     <Compile Include="Entities\Evento.cs" />
     <Compile Include="Entities\Empresa.cs" />
     <Compile Include="Entities\Tarea.cs" />
     <Compile Include="Entities\TipoServicio.cs" />
     <Compile Include="Entities\Turno.cs" />
-    <Compile Include="Migrations\201311050251493_inicial.cs" />
-    <Compile Include="Migrations\201311050251493_inicial.Designer.cs">
-      <DependentUpon>201311050251493_inicial.cs</DependentUpon>
+    <Compile Include="Migrations\201311020312484_Inicial.cs" />
+    <Compile Include="Migrations\201311020312484_Inicial.Designer.cs">
+      <DependentUpon>201311020312484_Inicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201311032308053_comisarias.cs" />
+    <Compile Include="Migrations\201311032308053_comisarias.Designer.cs">
+      <DependentUpon>201311032308053_comisarias.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,8 +108,11 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201311050251493_inicial.resx">
-      <DependentUpon>201311050251493_inicial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201311020312484_Inicial.resx">
+      <DependentUpon>201311020312484_Inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311032308053_comisarias.resx">
+      <DependentUpon>201311032308053_comisarias.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

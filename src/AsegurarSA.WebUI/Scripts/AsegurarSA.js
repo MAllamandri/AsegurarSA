@@ -51,6 +51,25 @@ function GoogleMap(clienteid) {
         });
     });    
 
+    var pinIcon = new google.maps.MarkerImage(
+        '../Content/Themes/AsegurarSA/img/policia.png',
+        null, /* size is determined at runtime */
+        null, /* origin is 0,0 */
+        null, /* anchor is bottom center of the scaled image */
+        new google.maps.Size(32, 38)
+    );
+    $.getJSON("/Alarma/GetComisarias")
+        .done(function (data) {
+            $.each(data, function (i, item) {
+                debugger;
+                var mak = new google.maps.Marker({
+                    position: new google.maps.LatLng(item.Latitud, item.Longitud),
+                    map: map,
+                    title: item.Descripcion,
+                    icon:pinIcon//'../Content/Themes/AsegurarSA/img/policia.png'
+                });
+            });
+    });
 };
 
 

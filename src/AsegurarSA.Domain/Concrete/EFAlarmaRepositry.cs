@@ -44,5 +44,10 @@ namespace AsegurarSA.Domain.Concrete
             }
             context.SaveChanges();
         }
+
+        public IQueryable<Comisaria> GetComisarias()
+        {
+            return context.Comisarias;
+        }
     }
 }
