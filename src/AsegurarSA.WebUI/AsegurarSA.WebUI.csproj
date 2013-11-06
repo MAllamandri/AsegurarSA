@@ -162,6 +162,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infraestructura\AccountHelper.cs" />
     <Compile Include="Infraestructura\NinjectControllerFactory.cs" />
     <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\AlarmaViewModel.cs" />
