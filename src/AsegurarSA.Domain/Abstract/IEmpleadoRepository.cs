@@ -14,5 +14,6 @@ namespace AsegurarSA.Domain.Abstract
         void DeleteEmpleado(Empleado empleado);
         string[] ObtenerEmpleadosPorRol(string Rol);
         IEnumerable<Empleado> ObtenerEmpleadoPorUsername(string[] username);
+        void SaveStyle(Empleado empleado,string style);
     }
 }

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using AsegurarSA.Domain.Abstract;
 using AsegurarSA.Domain.Entities;
+using WebMatrix.WebData;
 
 namespace AsegurarSA.WebUI.Controllers
 {
@@ -68,6 +69,15 @@ namespace AsegurarSA.WebUI.Controllers
             var empleado = _repository.Empleados.FirstOrDefault(e => e.EmpleadoId == EmpleadoId);
             _repository.DeleteEmpleado(empleado);
             return RedirectToAction("List");
+        }
+
+        [HttpPost]
+        public JsonResult SetearStyle(string sty)
+        {
+            Empleado emp = _repository.Empleados.AsEnumerable().First(e => e.EmpleadoId == WebSecurity.CurrentUserId);
+            _repository.SaveStyle(emp, sty);
+
+            return Json(true, JsonRequestBehavior.AllowGet);
         }
     }
 }
