@@ -24,7 +24,7 @@
                  </div>
                  
                  <div class="form-actions">
-                     <button class="btn btn-primary btn-sm" type="submit">Generar</button>
+                     <button id ="generar"class="btn btn-primary btn-sm" type="submit">Generar</button>
                      <a href="/" class="text-danger">Cancelar</a>
                  </div>
              }
@@ -40,4 +40,23 @@
 
         $('.datepicker').datepicker();
     });
+
+    $("#generar").click(
+        function (e) {
+            debugger;
+            var Fi = $("#FechaInicio").val();
+            var FF = $("#FechaFin").val();
+            if ((Fi == "" || FF == "") || (Fi == "" && FF == ""))
+            {
+                alert("Por favor ingrese la/las fecha/s");
+                e.preventDefault();
+            } else {
+                if (Fi > FF) {
+                    alert("Por favor ingrese correctamente las fechas");
+                    e.preventDefault();
+                }
+            }
+        }
+    );
+
 </script>

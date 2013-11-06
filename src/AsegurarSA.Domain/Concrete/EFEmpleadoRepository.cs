@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Web.Hosting;
 using System.Web.Security;
+using System.Web.UI.WebControls;
 using AsegurarSA.Domain.Abstract;
 using AsegurarSA.Domain.Entities;
 using WebMatrix.WebData;
@@ -92,6 +93,13 @@ namespace AsegurarSA.Domain.Concrete
                 }
             }
             return lista;
+        }
+
+        public void SaveStyle(Empleado empleado, string style)
+        {
+            empleado.Style = style;
+            context.Entry(empleado).State = System.Data.Entity.EntityState.Modified;
+            context.SaveChanges();
         }
     }
 }

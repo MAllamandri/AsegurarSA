@@ -74,7 +74,7 @@
                     </div>
                     
                     <div class="form-actions">
-                        <button class="btn btn-primary btn-sm" type="submit">Guardar</button>
+                        <button id="generar" class="btn btn-primary btn-sm" type="submit">Guardar</button>
                         <a href="/Empleados" class="text-danger">Cancelar</a>
                     </div>
                 }
@@ -90,4 +90,16 @@
         $('#sidebar #empleado #create').addClass('active');
         $('.datepicker').datepicker();
     });
+    
+    $("#generar").click(
+       function (e) {
+           debugger;
+           var FN = $("#FechaNacimiento").val();
+           d = new Date();
+           if (FN < d.getDate || FN == "") {
+               alert("La fecha de nacimiento es menor a la actual o es incorrecta");
+               e.preventDefault();
+           } 
+       }
+   );
 </script>

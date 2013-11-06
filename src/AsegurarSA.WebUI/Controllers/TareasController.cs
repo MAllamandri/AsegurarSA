@@ -52,7 +52,6 @@ namespace AsegurarSA.WebUI.Controllers
             tarea.EmpleadoId = empleado;
             tarea.ClienteId = cliente;
             _repository.SaveTarea(tarea);
-
             return RedirectToAction("List");
         }
 

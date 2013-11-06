@@ -141,8 +141,10 @@ $(document).ready(function(){
 	{
 	    var style = $(this).attr('href').replace('#', '');
 
-		$('.skin-color').attr('href','/Content/themes/AsegurarSA/css/unicorn.'+style+'.css');
-		$(this).siblings('a').css({'border-color':'transparent'});
-		$(this).css({'border-color':'#aaaaaa'});
-	});
+	    $('.skin-color').attr('href', '/Content/themes/AsegurarSA/css/unicorn.' + style + '.css');
+	    $(this).siblings('a').css({ 'border-color': 'transparent' });
+	    $(this).css({ 'border-color': '#aaaaaa' });
+	}
+	   
+	);
 });
