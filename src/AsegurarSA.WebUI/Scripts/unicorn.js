@@ -140,7 +140,13 @@ $(document).ready(function(){
 	$('#style-switcher a').click(function()
 	{
 	    var style = $(this).attr('href').replace('#', '');
-
+	    $.ajax(
+          {
+              type: "POST",
+              url: "/Empleados/SetearStyle",
+              data: { sty: style },
+              dataType: "json",
+          });
 	    $('.skin-color').attr('href', '/Content/themes/AsegurarSA/css/unicorn.' + style + '.css');
 	    $(this).siblings('a').css({ 'border-color': 'transparent' });
 	    $(this).css({ 'border-color': '#aaaaaa' });

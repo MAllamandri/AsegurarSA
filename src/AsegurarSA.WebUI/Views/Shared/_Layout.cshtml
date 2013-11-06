@@ -101,11 +101,11 @@
 		<div id="style-switcher">
 			<i class="glyphicon glyphicon-arrow-left"></i>
 			<span>Style:</span>
-		    <a href="#grey" style="background-color: #555555;border-color: #aaaaaa;" onclick="save()"></a>
-            <a href="#light-blue" style="background-color: #8399b0;" onclick="save()"></a>
-			<a href="#blue" style="background-color: #2D2F57;"  onclick="save()"></a>
-			<a href="#red" style="background-color: #673232;" onclick="save()"></a>
-            <a href="#red-green" style="background-image: url('/Content/themes/AsegurarSA/img/demo/red-green.png');background-repeat: no-repeat;" onclick="save()"></a>
+		    <a href="#grey" style="background-color: #555555;border-color: #aaaaaa;" ></a>
+            <a href="#light-blue" style="background-color: #8399b0;" ></a>
+			<a href="#blue" style="background-color: #2D2F57;"  ></a>
+			<a href="#red" style="background-color: #673232;" ></a>
+            <a href="#red-green" style="background-image: url('/Content/themes/AsegurarSA/img/demo/red-green.png');background-repeat: no-repeat;" ></a>
         </div>
 		
 		<div id="content">
@@ -136,20 +136,31 @@
            @* <script src="~/Scripts/unicorn.js"></script>*@
 	        <script src="~/Scripts/unicorn.dashboard.js"></script>
 	        <script src="~/Scripts/AsegurarSA.js"></script>
-            <script> function save() {
-            var style = $("#style-switcher a").attr('href').replace("#","");
-             debugger;
-                 $.ajax(
-            {
-                type: "POST",
-                url: "/Empleados/SetearStyle",
-                data: {sty : style},
-                dataType: "json",
-                success: function (result) {
-                    alert("Estilo modificado");
-                },
-            });
-             }
+            <script> 
+
+    //$("#style-switcher a").on("click", function() {
+    //    var style = window.location.hash.replace("#", "");
+    //    $.ajax(
+    //        {
+    //            type: "POST",
+    //            url: "/Empleados/SetearStyle",
+    //            data: { sty: style },
+    //            dataType: "json",
+    //        });
+    //});
+    //        //var style = $("#style-switcher a").attr('href').replace("#","");
+            // debugger;
+            //     $.ajax(
+            //{
+            //    type: "POST",
+            //    url: "/Empleados/SetearStyle",
+            //    data: {sty : style},
+            //    dataType: "json",
+            //    success: function (result) {
+            //        alert("Estilo modificado");
+            //    },
+            //});
+            // }
             </script>
     </body>
 </html>
