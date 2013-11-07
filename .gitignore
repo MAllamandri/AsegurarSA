@@ -149,3 +149,5 @@ $RECYCLE.BIN/
 
 # Mac crap
 .DS_Store
+/src/AsegurarSA.WebUI/Content/Grabaciones/*.mp4
+/src/AsegurarSA.WebUI/Content/Grabaciones/*.wmv
