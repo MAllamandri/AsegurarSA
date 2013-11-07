@@ -1,21 +1,4 @@
 ﻿@using System.Activities.Statements
-@*<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
-    @Styles.Render("~/Content/css")
-    @Styles.Render("~/Content/bootstrap/bootstrap.css")
-    @Scripts.Render("~/bundles/modernizr")
-</head>
-<body>
-    
-
-    @Scripts.Render("~/bundles/jquery")
-    @RenderSection("scripts", required: false)
-</body>
-</html>*@
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,18 +31,18 @@
             
         <div id="sidebar">
             <ul>
+                <li id="AsegurarSA"><a href="/"><i class="glyphicon glyphicon-home"></i> <span>AseguraSA</span></a></li>
                 <li class="submenu" id="empleado">
                     <a href="/Empleados"><i class="glyphicon glyphicon-inbox"></i> <span>Empleados</span> <i class="arrow glyphicon glyphicon-chevron-right"></i></a>
                     <ul>
-                        <li id="list"><a href="/Empleados/">Lista de empleados</a></li>
+                        <li id="list"><a href="/Empleados/list">Lista de empleados</a></li>
                         <li id="create"><a href="/Empleados/CrearEmpleado">Crear nuevo</a></li>
                     </ul>
                 </li>
-                @*<li id="empleado"><a href="buttons.html"><i class="glyphicon glyphicon-inbox"></i> <span>Empleados</span></a></li>*@
                 <li class="submenu" id="cliente">
                     <a href="/Cliente/list"><i class="glyphicon glyphicon-user"></i> <span>Clientes</span> <i class="arrow glyphicon glyphicon-chevron-right"></i></a>
                     <ul>
-                        <li id="list"><a href="/Cliente/">Lista de clientes</a></li>
+                        <li id="list"><a href="/Cliente/list">Lista de clientes</a></li>
                         <li id="create"><a href="/Cliente/Create">Crear nuevo</a></li>
                     </ul>
                 </li>
@@ -136,32 +119,6 @@
            @* <script src="~/Scripts/unicorn.js"></script>*@
 	        <script src="~/Scripts/unicorn.dashboard.js"></script>
 	        <script src="~/Scripts/AsegurarSA.js"></script>
-            <script> 
-
-    //$("#style-switcher a").on("click", function() {
-    //    var style = window.location.hash.replace("#", "");
-    //    $.ajax(
-    //        {
-    //            type: "POST",
-    //            url: "/Empleados/SetearStyle",
-    //            data: { sty: style },
-    //            dataType: "json",
-    //        });
-    //});
-    //        //var style = $("#style-switcher a").attr('href').replace("#","");
-            // debugger;
-            //     $.ajax(
-            //{
-            //    type: "POST",
-            //    url: "/Empleados/SetearStyle",
-            //    data: {sty : style},
-            //    dataType: "json",
-            //    success: function (result) {
-            //        alert("Estilo modificado");
-            //    },
-            //});
-            // }
-            </script>
     </body>
 </html>
 

@@ -10,7 +10,7 @@ using Ninject.Infrastructure.Introspection;
 
 namespace AsegurarSA.WebUI.Controllers
 {
-    [Authorize(Roles = "Administrador")]
+    [Authorize(Roles = "Administrador, Root")]
     public class TurnoController : Controller
     {
         //

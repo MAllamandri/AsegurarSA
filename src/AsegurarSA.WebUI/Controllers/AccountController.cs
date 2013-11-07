@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Security;
 using System.Web;
 using System.Web.Mvc;
 using AsegurarSA.WebUI.Models;
@@ -43,7 +44,11 @@ namespace AsegurarSA.WebUI.Controllers
             WebSecurity.Logout();
             return RedirectToAction("Login");
         }
-
+        [Authorize]
+        public ActionResult Home()
+        {
+            return View();
+        }
 
     }
 }

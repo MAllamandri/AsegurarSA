@@ -7,19 +7,19 @@
     var map = new google.maps.Map(document.getElementById("map"),
         mapOptions);
     var marker;
-    
+
     function placeMarker(location) {
         if (marker) {
             marker.setPosition(location);
-            $("#Latitud").val(marker.position.lb);
-            $("#Longitud").val(marker.position.mb);
+            $("#Latitud").val(marker.position.ob);
+            $("#Longitud").val(marker.position.nb);
         } else {
             marker = new google.maps.Marker({
                 position: location,
                 map: map
             });
-            $("#Latitud").val(marker.position.lb);
-            $("#Longitud").val(marker.position.mb);
+            $("#Latitud").val(marker.position.ob);
+            $("#Longitud").val(marker.position.nb);
         }
     }
 
@@ -37,19 +37,9 @@ function GoogleMap(clienteid) {
     var map = new google.maps.Map(document.getElementById("map"),
         mapOptions);
 
-    
-    $.getJSON("/Alarma/GetAlamasCliente", {
-        clienteId: clienteid,
-    }).done(function(data) {
-        $.each(data, function (i, item) {
-            var mak = new google.maps.Marker({
-                position: new google.maps.LatLng(item.Latitud, item.Longitud),
-                map: map,
-                title:'Alarma Nro: ' + item.AlarmaId
-            });
-               
-        });
-    });    
+
+
+
 
     var pinIcon = new google.maps.MarkerImage(
         '../Content/Themes/AsegurarSA/img/policia.png',
@@ -61,7 +51,6 @@ function GoogleMap(clienteid) {
     $.getJSON("/Alarma/GetComisarias")
         .done(function (data) {
             $.each(data, function (i, item) {
-                debugger;
                 var mak = new google.maps.Marker({
                     position: new google.maps.LatLng(item.Latitud, item.Longitud),
                     map: map,
@@ -69,7 +58,33 @@ function GoogleMap(clienteid) {
                     icon:pinIcon//'../Content/Themes/AsegurarSA/img/policia.png'
                 });
             });
-    });
+        });
+    
+    $.getJSON("/Alarma/GetAlamasCliente",{clienteid:clienteid})
+        .done(function (data) {
+            $.each(data, function (i, item) {
+                debugger;
+                var mak = new google.maps.Marker({
+                    position: new google.maps.LatLng(item.Latitud, item.Longitud),
+                    map: map,
+    //                title: item.Descripcion,
+                  //  icon: pinIcon//'../Content/Themes/AsegurarSA/img/policia.png'
+                });
+            });
+        });
+    
+    //$.getJSON("/Alarma/GetAlamasCliente", {
+    //    clienteId: clienteid,
+    //}).done(function (data) {
+    //    $.each(data, function (i, item) {
+    //        var mak = new google.maps.Marker({
+    //            position: new google.maps.LatLng(item.Latitud, item.Longitud),
+    //            map: map,
+    //            title: 'Alarma Nro: ' + item.AlarmaId,
+    //        });
+
+    //    });
+    //});
 };
 
 

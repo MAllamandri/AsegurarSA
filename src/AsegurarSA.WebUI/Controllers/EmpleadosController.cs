@@ -9,7 +9,7 @@ using WebMatrix.WebData;
 
 namespace AsegurarSA.WebUI.Controllers
 {
-    [Authorize(Roles = "Administrador")]
+    [Authorize(Roles = "Administrador, Root")]
     public class EmpleadosController : Controller
     {
         // GET: /Empleados/

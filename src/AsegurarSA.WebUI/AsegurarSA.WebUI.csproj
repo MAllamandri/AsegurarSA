@@ -315,6 +315,7 @@
     <Content Include="Content\themes\AsegurarSA\fonts\glyphiconshalflings-regular.svg" />
     <Content Include="Content\themes\AsegurarSA\img\alpha.png" />
     <Content Include="Content\themes\AsegurarSA\img\asegurar.png" />
+    <Content Include="Content\themes\AsegurarSA\img\asegurarblack.png" />
     <Content Include="Content\themes\AsegurarSA\img\breadcrumb.png" />
     <Content Include="Content\themes\AsegurarSA\img\demo\av1.jpg" />
     <Content Include="Content\themes\AsegurarSA\img\demo\av2.jpg" />
@@ -565,6 +566,7 @@
     <Content Include="Views\Grabacion\Upload.cshtml" />
     <Content Include="Views\Grabacion\Grabaciones.cshtml" />
     <Content Include="Views\Grabacion\Reproducir.cshtml" />
+    <Content Include="Views\Account\Home.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

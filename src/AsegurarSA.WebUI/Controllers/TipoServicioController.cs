@@ -8,7 +8,7 @@ using AsegurarSA.Domain.Entities;
 
 namespace AsegurarSA.WebUI.Controllers
 {
-   [Authorize(Roles = "Gerente")]
+   [Authorize(Roles = "Gerente, Root" )]
     public class TipoServicioController : Controller
     {
         //

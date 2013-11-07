@@ -91,15 +91,15 @@
         $('.datepicker').datepicker();
     });
     
-    $("#generar").click(
-       function (e) {
-           debugger;
-           var FN = $("#FechaNacimiento").val();
-           d = new Date();
-           if (FN < d.getDate || FN == "") {
-               alert("La fecha de nacimiento es menor a la actual o es incorrecta");
-               e.preventDefault();
-           } 
-       }
-   );
+    //$("#generar").click(
+    //   function (e) {
+    //       debugger;
+    //       var FN = $("#FechaNacimiento").val();
+    //       d = new Date();
+    //       if (FN > d.getDate || FN == "") {
+    //           alert("La fecha de nacimiento es menor a la actual o es incorrecta");
+    //          return false
+    //       } 
+    //   }
+   //);
 </script>
