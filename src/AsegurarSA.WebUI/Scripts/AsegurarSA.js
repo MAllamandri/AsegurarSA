@@ -11,8 +11,8 @@
     function placeMarker(location) {
         if (marker) {
             marker.setPosition(location);
-            $("#Latitud").val(marker.position.ob);
-            $("#Longitud").val(marker.position.nb);
+            $("#Latitud").val(marker.position.nb);
+            $("#Longitud").val(marker.position.ob);
         } else {
             marker = new google.maps.Marker({
                 position: location,
@@ -67,24 +67,10 @@ function GoogleMap(clienteid) {
                 var mak = new google.maps.Marker({
                     position: new google.maps.LatLng(item.Latitud, item.Longitud),
                     map: map,
-    //                title: item.Descripcion,
-                  //  icon: pinIcon//'../Content/Themes/AsegurarSA/img/policia.png'
+                    title: item.AlarmaId,
                 });
             });
         });
-    
-    //$.getJSON("/Alarma/GetAlamasCliente", {
-    //    clienteId: clienteid,
-    //}).done(function (data) {
-    //    $.each(data, function (i, item) {
-    //        var mak = new google.maps.Marker({
-    //            position: new google.maps.LatLng(item.Latitud, item.Longitud),
-    //            map: map,
-    //            title: 'Alarma Nro: ' + item.AlarmaId,
-    //        });
-
-    //    });
-    //});
 };
 
 

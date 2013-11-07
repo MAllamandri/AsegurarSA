@@ -52,10 +52,10 @@ namespace AsegurarSA.Domain.Migrations
                 user.Add("FechaNacimiento", DateTime.Now);
                 user.Add("Telefono", "565758");
                 user.Add("Eliminado", "false");
-            //    user.Add("EmpleadoId", "1");
+                user.Add("Style", "grey");
                 var e = new MembershipCreateStatus();
                 membership.CreateUserAndAccount("pibarra", "admin", false, user);
-                // new { Nombre = "Pablo" });//("pibarra", "admin",null,null,null,true,null,out e);
+                
             }
             if (!roles.GetRolesForUser("pibarra").Contains("Root"))
             {
